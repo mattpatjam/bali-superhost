@@ -51,8 +51,67 @@ Villa Sourcer and PA Sourcer need Bahasa Indonesia and a real local owner networ
 
 ---
 
+## From Finding Top-Performing Salespeople
+
+### B1. BLOCKER: non-solicit status is undefined and this chapter is a poaching strategy
+
+Roberge's method is targeted poaching of employed top performers. Applied in Bali, the highest-scoring candidates in the entire pool are brokers at Bali Exception, Ray White, Harcourts, Exotiq, Property Bali, and the other established agencies. Several of the best are people Matthieu has worked alongside.
+
+Per `context/current-priorities.md` item 7, the signed BSH offer letter does not mention a non-compete anywhere, and the duration was never agreed. Non-solicitation was not covered either way.
+
+This needs resolving before any outreach goes out, not after. Two separate exposures:
+
+- **Matthieu's own obligations to Bali Exception.** Whatever his BE employment contract says about soliciting colleagues after leaving. This is the BE contract, not the BSH letter, and has not been reviewed in this workspace.
+- **BSH's exposure**, if Matthieu runs recruiting outreach into his former employer's team on BSH's behalf in his first weeks.
+
+The reputational dimension is separate from the legal one and may matter more. The Bali broker community is small and WhatsApp-connected. A poaching campaign traced back to Matthieu in month one shapes how he is dealt with by every agency for years, including on co-broke deals, which is a live revenue channel (the Seminyak villa with Gilles Demunter is exactly that).
+
+Recommendation: get the BE contract reviewed and get the BSH non-compete pinned down in writing, before building the sourcing list. Do not treat this as a formality to clear later.
+
+### B2. LinkedIn is the wrong channel here, and this is a substitution not a tweak
+
+Roberge's entire sourcing step runs on LinkedIn search. LinkedIn penetration among Bali villa brokers is low, and among Indonesian sourcers lower still. The professional surface for this market is elsewhere:
+
+| Roberge's channel | BSH substitute |
+|---|---|
+| LinkedIn search by title, location, company | Agency team pages and listing portals (Rumah123, Lamudi, Bali-specific portals). Agency rosters are public and name their agents. |
+| LinkedIn profile as work sample | **Instagram.** A Bali broker's Instagram is their actual positioning and writing sample, and it is public. This is the closest functional equivalent to Roberge's profile-quality indicator, and arguably a better one because it shows how they sell. |
+| LinkedIn second-degree connection | WhatsApp broker community. Matthieu is already inside it (Sales BE, Agent BE groups per `context/team.md`). Materially warmer than a LinkedIn second-degree. |
+| Team referrals | Same, and stronger. Small market, everyone knows who performs. |
+
+The referral-ask email script still transfers, but it becomes a WhatsApp message, which changes the register: shorter, less formal, no subject line to work with. The subject-line tactic (use their company or school) does not survive the channel change and needs replacing with a first-line equivalent.
+
+### B3. The schools criterion should be dropped, not adapted
+
+Roberge uses schools as an intelligence proxy twice. In the Bali and Indonesian talent pool this filter has close to no signal and real cost: it would systematically screen out the local candidates most likely to succeed in the Villa Sourcer and PA Sourcer roles, where the qualifying asset is network and local credibility, not credentials.
+
+Replace with a direct intelligence assessment in the interview, which is more reliable anyway. The pre-interview exercise is the natural place for it.
+
+### B4. Two indicators get stronger in Bali, one gets weaker
+
+- **Longevity gets much stronger.** Agency-hopping is the norm in the Bali market, often annually, chasing split improvements. That makes genuine tenure rare and therefore highly diagnostic. Likely a better signal here than it was at HubSpot.
+- **Buyer-context alignment is the top screen.** Selling a $1.2M leasehold villa to a European or Singaporean buyer who needs PT PMA structuring explained is not the same job as selling an IDR 800M house to a domestic buyer. Same job title, different context, and per the book's own premise that difference predicts more than talent does.
+- **Team rankings get weaker.** Bali agencies rarely publish internal rankings and brokers rarely state them. Self-reported production numbers are unverifiable and commonly inflated. This has to move from a screening indicator to something tested in reference checks, and reference checks in this market are themselves unreliable because a former agency has an incentive to disparage a departing producer.
+
+### B5. The "first sales hire accelerates product-market fit" point applies directly
+
+Easy to dismiss as startup-only advice. It is not, in this case. BSH brokerage is a new business line inside Kozystay: the positioning against established agencies, which listings to chase, which buyer segments respond, and how the Kozystay management portfolio feeds brokerage inventory are all genuinely unresolved. That is a product-market-fit problem in substance.
+
+So the first Senior Brokerage Agent should be selected partly on whether they will feed market learning back, not purely on closing ability. Concretely, that means adding a trait to that role's sheet that Roberge's HubSpot five does not contain, something like market feedback quality, and assessing it (can they articulate why deals in their current agency are lost, with specifics).
+
+### B6. The seniority warning cuts at the "Senior" in Senior Brokerage Agent
+
+Roberge warns against overweighting senior leadership experience and domain knowledge on the first hire. The role title as it stands in the tracker is Senior Brokerage Agent, which pre-commits to seniority before the trait theory has been written.
+
+Worth checking whether "Senior" is doing real work here (genuine autonomy and deal-size requirement) or whether it is anchoring the search toward expensive, experienced, high-pressure-trained brokers, which is the A2 problem arriving through the job title.
+
+---
+
 ## Open Decisions for Matthieu
 
-1. Experienced Bali brokers: screen out on high-pressure tactics, or hire and retrain? (A2)
-2. Hire order and timing across the five roles. Not yet discussed, and it affects whether the first hires can help evaluate later ones.
-3. Whether the Admin & Listings Coordinator hire runs on a separate *Who*-based process entirely. (A1)
+1. **Non-solicit and non-compete status, before any outreach.** Blocking. (B1)
+2. Experienced Bali brokers: screen out on high-pressure tactics, or hire and retrain? (A2)
+3. Hire order and timing across the five roles. Not yet discussed, and it affects whether the first hires can help evaluate later ones.
+4. Whether the Admin & Listings Coordinator hire runs on a separate *Who*-based process entirely. (A1)
+5. Is "Senior" in Senior Brokerage Agent a real requirement or an inherited assumption? (B6)
+6. Who does the recruiting. Roberge says build an internal recruiting agency. At 5 hires BSH cannot justify a recruiter, so by default this is Matthieu, which has a time cost worth naming given he is also running acquisition at 50%.
