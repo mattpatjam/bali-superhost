@@ -1,6 +1,6 @@
 # BSH Hiring — Adaptation Notes (Raw Capture)
 
-*Last updated: 2026-10-01*
+*Last updated: 2026-10-03*
 
 **What this file is:** a running capture log of how Roberge's Sales Acceleration Formula needs to change to work for BSH. Raw notes, not the methodology. The finished methodology gets written to `hiring-methodology.md` once the book is fully captured and the design is approved.
 
