@@ -1,0 +1,11 @@
+.DS_Store
+.tmp/
+*.log
+.env
+credentials.json
+token.json
+# Binary deliverables live in Google Drive, not here
+*.xlsx
+*.docx
+*.pptx
+*.pdf

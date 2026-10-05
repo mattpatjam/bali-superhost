@@ -1,0 +1,32 @@
+# Bali Superhost — Project Tracker
+
+*Last updated: 2026-09-09*
+
+---
+
+## Overview
+
+Head of Brokerage (50%) & Head of Property Acquisition (50%) at Bali Superhost (Kozystay Group). Start date: **October 1, 2026**. Building the brokerage from scratch.
+
+Negotiation and comp/ESOP terms are tracked separately at `Personal/Career/BSH-Kozystay/` — this tracker covers the operational build only.
+
+## File Index
+
+- `Strategy/` — empty, next: extract Sections 1-10 of `Personal/Career/BSH-Kozystay/bsh-tuesday-meeting-draft.md` into a clean operating plan (positioning, competitive landscape, GTM channels, 90-day roadmap), stripped of negotiation framing
+- `Hiring/` — empty, next: job descriptions for 2x Senior Brokerage Agent, Villa Sourcer, Property Acquisition Sourcer, Admin & Listings Coordinator
+- `Training/` — empty, next: adapt `Bali Exception/Training/` (7 files, deal-lifecycle sales training) for BSH's comp structure, listings, and team
+- `Systems/` — empty, next: CRM + brokerage-website requirements spec
+
+## Active Follow-ups
+
+| Item | Status | Next step |
+|---|---|---|
+| Strategy doc extraction | Not started | Pull from `bsh-tuesday-meeting-draft.md` Sections 1-10 |
+| Hiring — job descriptions | Not started | Draft 4 JDs from Section 6 of the strategy doc |
+| Training program adaptation | Not started | Resume `Bali Exception/Training/`, adapt to BSH |
+| CRM/systems spec | Not started | Draft requirements, no CRM exists yet for brokerage |
+
+## Session Log
+
+### 2026-09-09
+- Folder created (`Strategy/`, `Hiring/`, `Training/`, `Systems/`, this tracker, `CLAUDE.md`). Kept separate from `Personal/Career/BSH-Kozystay/` (negotiation record stays there).
