@@ -31,5 +31,11 @@ Negotiation and comp/ESOP terms are tracked separately at `Personal/Career/BSH-K
 
 ## Session Log
 
+### 2026-10-08
+- Started applying Roberge's *Sales Acceleration Formula* to BSH hiring. Wrote `Hiring/adaptation-notes.md`.
+- **Process failure worth recording:** built a duplicate reference file at `.claude/knowledge/books/hr/sales-acceleration-formula-reference.md` from dictated notes over two sessions, while the full 21,500-word reference already existed at `.claude/knowledge/books/sales/sales-acceleration-formula-reference.md`. Cause: checked the knowledge base before Matthieu finished adding the book, then never re-checked across a week. The `sales/` shelf and the `ask-the-books` shelf table were both already correct. Duplicate deleted, adaptation notes rewritten against the real text, and three claims that were my own inference rather than the book's content were corrected (aggressiveness as a negative predictor: not in the book; prior sales experience as non-predictive: the real finding is context mismatch; step 4 needing n>5: the book says two or three hires is already enough for the judgment version).
+- **Blocker raised:** non-solicit / non-compete status is undefined and Roberge's highest-yield sourcing tactic is relationship-based poaching of exactly the agencies Matthieu came from. Must be resolved before any outreach.
+- Open: D2 (is Bali villa brokerage a commoditized or complex buyer context) determines whether work ethic or intelligence gets the heavier weight, and may split by role.
+
 ### 2026-09-09
 - Folder created (`Strategy/`, `Hiring/`, `Training/`, `Systems/`, this tracker, `CLAUDE.md`). Kept separate from `Personal/Career/BSH-Kozystay/` (negotiation record stays there).
