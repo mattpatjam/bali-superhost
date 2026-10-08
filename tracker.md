@@ -13,7 +13,8 @@ Negotiation and comp/ESOP terms are tracked separately at `Personal/Career/BSH-K
 ## File Index
 
 - `Strategy/` — empty, next: extract Sections 1-10 of `Personal/Career/BSH-Kozystay/bsh-tuesday-meeting-draft.md` into a clean operating plan (positioning, competitive landscape, GTM channels, 90-day roadmap), stripped of negotiation framing
-- `Hiring/` — empty, next: job descriptions for 2x Senior Brokerage Agent, Villa Sourcer, Property Acquisition Sourcer, Admin & Listings Coordinator
+- `Hiring/adaptation-notes.md` — how Roberge's Sales Acceleration Formula hiring framework adapts to BSH. 6 open decisions, 6 direct transfers, 4 substitutions, scorecard mechanics. Raw capture, not the methodology. Next: resolve D1 (blocker) and D2, then write `hiring-methodology.md`
+- `Hiring/` — job descriptions still to come: 2x Senior Brokerage Agent, Villa Sourcer, Property Acquisition Sourcer, Admin & Listings Coordinator. These come out of the methodology, not before it
 - `Training/` — empty, next: adapt `Bali Exception/Training/` (7 files, deal-lifecycle sales training) for BSH's comp structure, listings, and team
 - `Systems/` — empty, next: CRM + brokerage-website requirements spec
 
