@@ -1,6 +1,6 @@
 # Bali Superhost — Project Tracker
 
-*Last updated: 2026-09-09*
+*Last updated: 2026-10-08*
 
 ---
 
