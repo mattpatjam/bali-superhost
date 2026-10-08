@@ -1,117 +1,178 @@
 # BSH Hiring — Adaptation Notes (Raw Capture)
 
-*Last updated: 2026-10-03*
+*Last updated: 2026-10-08*
 
-**What this file is:** a running capture log of how Roberge's Sales Acceleration Formula needs to change to work for BSH. Raw notes, not the methodology. The finished methodology gets written to `hiring-methodology.md` once the book is fully captured and the design is approved.
+**What this file is:** a running capture log of how Roberge's Sales Acceleration Formula needs to change to work for BSH. Raw notes, not the methodology. The finished methodology gets written to `hiring-methodology.md` once the design is approved.
 
-**Framework source:** `.claude/knowledge/books/hr/sales-acceleration-formula-reference.md`
+**Framework source:** `.claude/knowledge/books/sales/sales-acceleration-formula-reference.md` (full book, 27 sections, all four formulas). Sections 2 to 6 are the hiring material. Sections 7 to 11 are the training formula and govern onboarding.
 
 **Roles to hire:** 2x Senior Brokerage Agent, Villa Sourcer, Property Acquisition Sourcer, Admin & Listings Coordinator.
 
----
-
-## From Part One: The Sales Hiring Formula
-
-### A1. The formula has to be built four times, not once
-
-Roberge's core premise is that the ideal characteristics follow from the sales context. BSH has four genuinely different sales contexts inside five hires:
-
-| Role | Sales context | Implication |
-|---|---|---|
-| Senior Brokerage Agent (x2) | High ticket, long cycle, foreign buyers, consultative, trust-dependent, often remote-first contact | Closest to HubSpot's context. Roberge transfers most cleanly here. |
-| Villa Sourcer | Outbound prospecting to local owners, high volume, rejection-heavy, relationship and local network driven | Closer to a *Predictable Revenue* prospector role than a closer role. Different traits. |
-| Property Acquisition Sourcer | Deal origination and analysis, numbers-heavy, negotiation with owners | Part sales, part analyst. Technical aptitude likely weights far higher than for the agents. |
-| Admin & Listings Coordinator | Not a sales role | Roberge does not apply. Use *Who*'s scorecard method instead. Do not force a sales trait sheet onto this hire. |
-
-One weighted trait sheet across all five hires would be a misapplication of the book's own argument.
-
-### A2. Roberge's buyer-behaviour finding collides with the Bali broker norm
-
-Roberge: intelligent and helpful beats aggressive and high-pressure with the empowered buyer.
-
-The experienced villa broker talent pool in Bali is, broadly, trained in the opposite direction: scarcity pressure, fast-close tactics, commission-chasing across agencies. Hiring the most experienced available broker therefore risks importing exactly the profile the evidence says underperforms, and doing it into a brand where trust is the differentiator against the existing agencies.
-
-This needs a decision, not just a note: does BSH screen experienced Bali brokers OUT on tactics, or hire them and retrain? Retraining a commission-driven closer away from pressure selling is slow and often fails.
-
-### A3. "Prior success" instead of "prior sales experience" widens a thin pool
-
-If the verification item holds (Roberge found track record of top performance predictive, industry and sales experience not predictive), this is the single most valuable transfer for BSH. Bali's pool of good villa brokers is small, mostly already employed, and mostly carrying A2's problem.
-
-Selecting for "has been the best at something" rather than "has sold villas" opens candidates from hospitality, tourism, luxury retail, and outside Bali entirely. Matthieu's own path (EHL, restaurant, coffee group COO, then junior to Senior Sales Manager in 5 years) is itself an instance of the pattern.
-
-### A4. Step 4 is not runnable for at least a year
-
-Roberge's iterate step needs enough hires with enough performance history to see which traits correlate. At n=5 across 4 role types, there is no statistical signal, and there will not be one in 2027 either.
-
-Replacement mechanism to design: for each hire, record the predicted trait scores and a written prediction of how they will perform, then grade the prediction at 6 and 12 months. That keeps the learning loop honest without pretending to have data. It is a forecasting discipline rather than a regression.
-
-### A5. Language and market split the trait sheets further
-
-Villa Sourcer and PA Sourcer need Bahasa Indonesia and a real local owner network. Senior Brokerage Agents sell primarily to European, Australian, and Singaporean buyers. These are different rapport-building skills, not the same trait scored higher or lower.
+*Revision note: this file was first written from dictated notes before the full reference was located. Rewritten 2026-10-08 against the actual text. Three earlier flags were wrong and are marked below.*
 
 ---
 
-## From Finding Top-Performing Salespeople
+## The Decisions That Have to Be Made
 
-### B1. BLOCKER: non-solicit status is undefined and this chapter is a poaching strategy
+### D1. BLOCKER: non-solicit status is undefined, and the book's best tactic is relationship-based poaching
 
-Roberge's method is targeted poaching of employed top performers. Applied in Bali, the highest-scoring candidates in the entire pool are brokers at Bali Exception, Ray White, Harcourts, Exotiq, Property Bali, and the other established agencies. Several of the best are people Matthieu has worked alongside.
+Roberge's highest-yield sourcing move is explicit: pick a head of sales you have a relationship with, list the salespeople who left her company, send her the list, ask which were standouts. Converted roughly 99 percent of the time. His talent-pool protocol goes further, interviewing people from competitor firms partly to find out who their top performers are.
 
-Per `context/current-priorities.md` item 7, the signed BSH offer letter does not mention a non-compete anywhere, and the duration was never agreed. Non-solicitation was not covered either way.
+In Bali that means Matthieu's own relationships at Bali Exception, Ray White, Harcourts, Exotiq and the rest. The highest-scoring candidates in the pool are people he has worked alongside.
 
-This needs resolving before any outreach goes out, not after. Two separate exposures:
+Per `context/current-priorities.md` item 7, the signed BSH offer letter does not mention a non-compete anywhere and the duration was never agreed. Non-solicitation was not covered either way. Separately, Matthieu's Bali Exception contract has never been reviewed in this workspace, so what he owes BE on soliciting former colleagues is simply unknown.
 
-- **Matthieu's own obligations to Bali Exception.** Whatever his BE employment contract says about soliciting colleagues after leaving. This is the BE contract, not the BSH letter, and has not been reviewed in this workspace.
-- **BSH's exposure**, if Matthieu runs recruiting outreach into his former employer's team on BSH's behalf in his first weeks.
+Two exposures, and the second may matter more:
 
-The reputational dimension is separate from the legal one and may matter more. The Bali broker community is small and WhatsApp-connected. A poaching campaign traced back to Matthieu in month one shapes how he is dealt with by every agency for years, including on co-broke deals, which is a live revenue channel (the Seminyak villa with Gilles Demunter is exactly that).
+- **Legal.** Whatever the BE contract says, plus BSH's position if Matthieu runs this outreach on their behalf in his first weeks.
+- **Reputational.** The Bali broker community is small and WhatsApp-connected. A poaching campaign traced back to Matthieu in month one shapes how every agency deals with him for years, including on co-brokes, which is live revenue (the Seminyak villa with Gilles Demunter is exactly that).
 
-Recommendation: get the BE contract reviewed and get the BSH non-compete pinned down in writing, before building the sourcing list. Do not treat this as a formality to clear later.
+Get the BE contract read and the BSH non-compete pinned down in writing before any sourcing list is built.
 
-### B2. LinkedIn is the wrong channel here, and this is a substitution not a tweak
+### D2. Is Bali villa brokerage a commoditized or a complex buyer context?
 
-Roberge's entire sourcing step runs on LinkedIn search. LinkedIn penetration among Bali villa brokers is low, and among Indonesian sourcers lower still. The professional surface for this market is elsewhere:
+This is the single highest-leverage question in the whole exercise, and it is not rhetorical.
+
+Roberge is explicit that **intelligence is not universally predictive. In a commoditized buyer context, work ethic is the superior predictor.** Intelligence mattered at HubSpot because the industry reshaped itself annually and reps had to absorb and retransmit new concepts faster than the market.
+
+Both readings are arguable for BSH:
+
+- **Commoditized:** the same villas are listed by multiple agencies, buyers shop several brokers, and the differentiator is responsiveness and follow-up volume. That argues work ethic over intelligence.
+- **Complex:** leasehold versus freehold, PT PMA structuring, zoning, due diligence, and the buyer is a foreigner who does not understand Indonesian property law. A broker who can explain structure clearly wins trust. That argues intelligence.
+
+Likely answer: it splits by role. The Senior Brokerage Agent faces the complex version. The Villa Sourcer faces a volume, activity-driven version. If so, the two trait sheets weight intelligence and work ethic in opposite directions, and that is a defensible outcome rather than an inconsistency.
+
+### D3. Context mismatch, not aggression, is the real hiring risk here
+
+**Correcting an earlier note.** The first version of this file claimed Roberge found aggressiveness negatively correlated with success. That is not in the book. "Aggressive" appears only as an example of a trait whose definition must be written down. The helpful-selling argument does exist in the book, but it sits in the training formula (section 11, manufacturing helpful salespeople buyers trust), not in the hiring correlations.
+
+The real and better-supported risk is Roberge's own first mistake: he recruited top performers out of large, established sales forces, high-activity phone sellers working transactional processes with well-understood value propositions, into an evangelistic sale where prospects did not know what the category was. **Top-dog status in one context did not transfer.**
+
+That maps onto BSH directly. The most available experienced candidates are top producers at high-volume Bali agencies with established brands and warm inbound flow. BSH brokerage is new, has no brand in brokerage, and has to be explained. Hiring the best broker from the most established agency is the exact error Roberge made.
+
+So the screen is not "do they use pressure tactics." It is "does their current buyer context resemble ours, and if not, do they have the coachability to re-learn." Which is a question the role play answers.
+
+### D4. Who does the recruiting
+
+Roberge's answer is to build a recruiting agency inside the company, hiring an agency recruiter who wants to start her own firm, paid on fill rates, timing, and long-term success of the hires.
+
+But note his own sequencing: **his first recruiter was not approved until the sales team reached 10 salespeople. Sourcing the initial team fell entirely on the head of sales.**
+
+BSH is hiring 5. So this is Matthieu, by the book's own standard, not an exception to it. Worth naming the time cost given he is also running property acquisition at 50 percent.
+
+### D5. Is "Senior" in Senior Brokerage Agent a real requirement?
+
+Roberge's first-hire teaching case ranks four candidates and puts **the SVP of Sales last** (hesitant to roll up sleeves, no recent front-line experience, low pace) and **the #1 salesperson from a 500-person team second-last** (unproven in an unstructured environment, arrived at his current employer to a finished deck, methodology and tools, all of which a first hire has to build). The winner is the entrepreneur who ran her own failed startup, because she will accelerate the company toward the right product-market fit.
+
+The role title pre-commits to seniority before the trait theory is written. Worth checking whether it is a genuine autonomy and deal-size requirement, or whether it is anchoring the search toward exactly the profile Roberge ranks lowest.
+
+### D6. Other open items
+
+- Hire order and timing across the five roles. Affects whether the first hires can help evaluate later ones.
+- Whether the Admin & Listings Coordinator runs on a separate *Who*-based process. It is not a sales role and Roberge does not apply to it.
+
+---
+
+## What Transfers Directly
+
+### T1. The coachability role play, essentially unchanged
+
+Roberge's three-step protocol is the most runnable thing in the book and needs almost no adaptation. Coachability was his single most significant hiring factor and consumed the majority of the interview.
+
+1. Set up a role play modelling the real buyer context. State who you are playing, how the candidate came to be talking to you, and the goal of the call.
+2. Ask "how do you think you did?" A candidate who says "great" is a bad sign. You want specifics on what worked and what did not. Then build on one of their own observations.
+3. Give one piece of praise and one improvement, say up front that you always do both, coach for real, then have them redo the role play applying it.
+
+Calibration: most candidates badly mishandle the second attempt, so look for effort, not perfection. In 1,000+ interviews over six years, about five crushed it, and every one became a rock star.
+
+BSH version: the scenario is a foreign buyer enquiry on a specific villa listing. Matthieu plays the buyer. This is straightforwardly buildable and he is well placed to run it.
+
+### T2. The top 10 percent bar on prior success, assessed outside real estate
+
+**Confirmed and sharper than the earlier note.** The interview line is mechanical: how many people held your role, where did you rank, what metric, which period, will references verify it. **The bar is top 10 percent.** Below that, a candidate has to score extremely high on everything else.
+
+Crucially, when the candidate did not come from a sizeable sales force or from sales at all, prior success is assessed through other domains: academic rank, standardised test scores, varsity captaincy or championship contribution, leadership of an organisation, or how they differentiated themselves from peers in their current role. Roberge's team included an Olympic gold medallist, a symphony cellist, and a comedian who appeared on Comedy Central.
+
+This is the most valuable transfer available to BSH. The pool of good villa brokers in Bali is small, mostly employed, and mostly carrying the D3 context problem. Selecting on "has been top decile at something" opens hospitality, tourism, luxury retail, and candidates from outside Bali. Matthieu's own path is an instance of the pattern.
+
+### T3. Longevity, with the book's calibration
+
+Roberge: a poor salesperson survives a year, a mediocre one two years, so three, four, or five-plus years in a high-performing environment is a strong signal.
+
+This gets **stronger** in Bali, not weaker. Agency-hopping is the norm here, often annually, chasing split improvements. Genuine multi-year tenure is therefore rare and highly diagnostic.
+
+### T4. The reference check that works around unreliable referees
+
+Earlier note flagged that Bali reference checks are unreliable because a former agency has reason to disparage a departing producer. Roberge's technique largely solves it: **do not ask whether the candidate worked hard. Give the referee the trait list, ask them to rank the traits strongest to weakest for that candidate, then ask why they ranked them that way.**
+
+A referee with an axe to grind can refuse to praise, but a forced ranking still yields relative information, and the "why" produces specifics that are checkable.
+
+### T5. Intelligence tested by starting training inside the interview
+
+Send domain training material after the first phone screen and ask them to learn it. In the next interview, inside the role play, ask them to explain one concept back as if advising you. Keep asking follow-ups until they are stumped. The deeper you get before answers degrade, the higher the score.
+
+BSH version is obvious and good: send the leasehold versus freehold and PT PMA basics, then have them explain the structure to Matthieu-as-buyer. It tests comprehension, simplification, and tolerance for being pushed, all at once, and it mirrors the actual job.
+
+### T6. The talent pool protocol, which doubles as competitive intel
+
+Roberge: build a list of every company with a sales team in your market and interview at least one person from each, deliberately including mediocre-looking candidates purely for intelligence. Ask about comp structure and pay levels, buyer context, team size and structure, what the training looks like, and whether anything changed recently that would push top performers to leave (commission change, leadership change).
+
+For BSH this is free and valuable twice over. It maps the hiring pool, and it produces competitive intelligence on every Bali agency's comp structure and team setup, which feeds the brokerage strategy doc that `Strategy/` still needs.
+
+Roberge's final tactic in this section, asking a candidate who the top performer is and networking to them, he flags as apply-at-your-own-risk and never used himself. Given D1, BSH should not use it.
+
+---
+
+## What Needs Substituting
+
+### S1. LinkedIn, mostly, but not the part that matters
+
+**Correcting an earlier note.** The first version of this file said LinkedIn is the wrong channel and the sourcing step needs wholesale substitution. Half right. Roberge's cold LinkedIn search does depend on LinkedIn penetration that Bali brokers do not have.
+
+But **his highest-yield tactic needs no LinkedIn search at all**: ask a head of sales you have a relationship with which of her departed reps were standouts. Matthieu has those relationships across multiple Bali agencies already. That tactic transfers intact and is the single best sourcing move available to him, subject to D1.
+
+What still needs substituting:
 
 | Roberge's channel | BSH substitute |
 |---|---|
-| LinkedIn search by title, location, company | Agency team pages and listing portals (Rumah123, Lamudi, Bali-specific portals). Agency rosters are public and name their agents. |
-| LinkedIn profile as work sample | **Instagram.** A Bali broker's Instagram is their actual positioning and writing sample, and it is public. This is the closest functional equivalent to Roberge's profile-quality indicator, and arguably a better one because it shows how they sell. |
-| LinkedIn second-degree connection | WhatsApp broker community. Matthieu is already inside it (Sales BE, Agent BE groups per `context/team.md`). Materially warmer than a LinkedIn second-degree. |
-| Team referrals | Same, and stronger. Small market, everyone knows who performs. |
+| LinkedIn search by title, zip, company | Agency team pages and listing portals (Rumah123, Lamudi, Bali portals). Agency rosters are public and name their agents. |
+| LinkedIn profile as work sample | **Instagram.** A Bali broker's Instagram is their real positioning and writing sample, it is public, and it shows how they sell. Better signal than a LinkedIn profile. |
+| Email with `[Employer]/[School]` subject line | WhatsApp. No subject line exists, so the recognition hook has to move to the first line. Needs rewriting. |
+| Second-degree LinkedIn connection | WhatsApp broker community. Matthieu is already inside it (Sales BE, Agent BE per `context/team.md`). Warmer than a LinkedIn second-degree. |
 
-The referral-ask email script still transfers, but it becomes a WhatsApp message, which changes the register: shorter, less formal, no subject line to work with. The subject-line tactic (use their company or school) does not survive the channel change and needs replacing with a first-line equivalent.
+The four-line referral-ask body transfers in substance: congratulate them, say who you are, say the team cannot keep up with lead flow so you are expanding, say their background resembles your top performers, then ask who in their network is looking. Never ask them directly. Register has to get shorter and less formal for WhatsApp.
 
-### B3. The schools criterion should be dropped, not adapted
+### S2. The schools filter
 
-Roberge uses schools as an intelligence proxy twice. In the Bali and Indonesian talent pool this filter has close to no signal and real cost: it would systematically screen out the local candidates most likely to succeed in the Villa Sourcer and PA Sourcer roles, where the qualifying asset is network and local credibility, not credentials.
+**Correcting an earlier note.** The first version said drop it as a useless proxy. The book's actual finding is more interesting: **second-tier schools produce the best candidates**, because elite-school hires often get bored inside a sales organisation and want progression faster than the company can provide.
 
-Replace with a direct intelligence assessment in the interview, which is more reliable anyway. The pre-interview exercise is the natural place for it.
+For BSH the filter itself still has little signal, because Indonesian and expat candidate pools do not sort into recognisable tiers the way Roberge's market did. But the underlying mechanism has a direct Bali analogue worth keeping: a candidate who is visibly over-credentialled for a brokerage seat, or treating it as a stepping stone, carries the same flight risk Roberge describes.
 
-### B4. Two indicators get stronger in Bali, one gets weaker
+So: do not filter on school. Do assess whether the role is a destination or a waypoint for them.
 
-- **Longevity gets much stronger.** Agency-hopping is the norm in the Bali market, often annually, chasing split improvements. That makes genuine tenure rare and therefore highly diagnostic. Likely a better signal here than it was at HubSpot.
-- **Buyer-context alignment is the top screen.** Selling a $1.2M leasehold villa to a European or Singaporean buyer who needs PT PMA structuring explained is not the same job as selling an IDR 800M house to a domestic buyer. Same job title, different context, and per the book's own premise that difference predicts more than talent does.
-- **Team rankings get weaker.** Bali agencies rarely publish internal rankings and brokers rarely state them. Self-reported production numbers are unverifiable and commonly inflated. This has to move from a screening indicator to something tested in reference checks, and reference checks in this market are themselves unreliable because a former agency has an incentive to disparage a departing producer.
+### S3. Team rankings as a screening indicator
 
-### B5. The "first sales hire accelerates product-market fit" point applies directly
+Roberge screens on team rankings, quota attainment, President's Club. Bali agencies rarely publish rankings, brokers rarely state them, and self-reported production is commonly inflated and unverifiable.
 
-Easy to dismiss as startup-only advice. It is not, in this case. BSH brokerage is a new business line inside Kozystay: the positioning against established agencies, which listings to chase, which buyer segments respond, and how the Kozystay management portfolio feeds brokerage inventory are all genuinely unresolved. That is a product-market-fit problem in substance.
+This moves from a profile-screening indicator to an interview question (the mechanical rank line in T2) plus the forced-ranking reference check in T4. The screen does not disappear, it relocates to a stage where it can be tested.
 
-So the first Senior Brokerage Agent should be selected partly on whether they will feed market learning back, not purely on closing ability. Concretely, that means adding a trait to that role's sheet that Roberge's HubSpot five does not contain, something like market feedback quality, and assessing it (can they articulate why deals in their current agency are lost, with specifics).
+### S4. Step 4 iteration, with a correction on how soon it works
 
-### B6. The seniority warning cuts at the "Senior" in Senior Brokerage Agent
+**Correcting an earlier note.** The first version said step 4 is not runnable at n=5 and needs replacing with a forecasting exercise. Too strong.
 
-Roberge warns against overweighting senior leadership experience and domain knowledge on the first hire. The role title as it stands in the tracker is Senior Brokerage Agent, which pre-commits to seniority before the trait theory has been written.
+Roberge's own position: **reflecting on as few as two or three hires is already compelling.** Go back to the scorecards of the people performing well and ask which traits they share, which traits are not predicting anything, and what is missing from the sheet entirely. Then do the same for those ramping slowly.
 
-Worth checking whether "Senior" is doing real work here (genuine autonomy and deal-size requirement) or whether it is anchoring the search toward expensive, experienced, high-pressure-trained brokers, which is the A2 problem arriving through the job title.
+What does NOT work at n=5 is the formal version. Roberge graduates to regression analysis after roughly a year of hiring, rerun every 6 to 12 months. BSH will not reach that in 2027.
+
+So step 4 runs in its judgment form from hire 3 onward, which is achievable. The discipline that makes it work is filling in the scorecard properly at the time, since the whole exercise depends on having a written record to look back at. Note Roberge's own point that the tooling is irrelevant, his ran in Excel, and the key is discipline rather than sophistication.
 
 ---
 
-## Open Decisions for Matthieu
+## Scorecard Mechanics to Carry Into the Methodology
 
-1. **Non-solicit and non-compete status, before any outreach.** Blocking. (B1)
-2. Experienced Bali brokers: screen out on high-pressure tactics, or hire and retrain? (A2)
-3. Hire order and timing across the five roles. Not yet discussed, and it affects whether the first hires can help evaluate later ones.
-4. Whether the Admin & Listings Coordinator hire runs on a separate *Who*-based process entirely. (A1)
-5. Is "Senior" in Senior Brokerage Agent a real requirement or an inherited assumption? (B6)
-6. Who does the recruiting. Roberge says build an internal recruiting agency. At 5 hires BSH cannot justify a recruiter, so by default this is Matthieu, which has a time cost worth naming given he is also running acquisition at 50%.
+From section 2, the parts that are easy to get wrong:
+
+- Each candidate is scored **1 to 10 per characteristic** on an **Interview Scorecard**.
+- **Weights are set to the strength of each trait's correlation with success.** Score and weight are two separate things. Without weights a candidate can win on traits that do not matter.
+- For every characteristic, **write the definition down, and define what a 1, a 5 and a 10 look like**, before interviewing. This is the step most likely to be skipped and it is what makes scores comparable across candidates and across interviewers.
+- Fill in the scorecard **after every interview**, not at the end of the process.
