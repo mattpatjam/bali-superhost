@@ -22,8 +22,10 @@ Negotiation and comp/ESOP terms are tracked separately at `Personal/Career/BSH-K
 
 | Item | Status | Next step |
 |---|---|---|
-| Strategy doc extraction | Not started | Pull from `bsh-tuesday-meeting-draft.md` Sections 1-10 |
-| Hiring — job descriptions | Not started | Draft 4 JDs from Section 6 of the strategy doc |
+| **Non-solicit / non-compete status** | **BLOCKING hiring outreach** | Get BE contract reviewed and BSH non-compete pinned down in writing. Roberge's best sourcing tactic is relationship-based poaching of Bali agency brokers, and the signed BSH letter never mentions a non-compete (see `current-priorities.md` item 7) |
+| Strategy doc extraction | Not started | Pull from `bsh-tuesday-meeting-draft.md` Sections 1-10. Note: Roberge's talent-pool protocol (`Hiring/adaptation-notes.md` T6) produces competitor comp and team intel as a by-product, feed it in here |
+| Hiring — methodology | In progress | Resolve D1 and D2 in `Hiring/adaptation-notes.md`, then write `hiring-methodology.md` (trait sheets per role, assessment method per trait, interview sequence, scorecard, decision rule) |
+| Hiring — job descriptions | Not started | Draft 4 JDs once the methodology defines the trait sheets |
 | Training program adaptation | Not started | Resume `Bali Exception/Training/`, adapt to BSH |
 | CRM/systems spec | Not started | Draft requirements, no CRM exists yet for brokerage |
 
