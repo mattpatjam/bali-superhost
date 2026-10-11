@@ -16,7 +16,8 @@ Negotiation and comp/ESOP terms are tracked separately at `Personal/Career/BSH-K
 - `Hiring/adaptation-notes.md` — how Roberge's Sales Acceleration Formula hiring framework adapts to BSH. 6 open decisions, 6 direct transfers, 4 substitutions, scorecard mechanics. Raw capture, not the methodology. Next: resolve D1 (blocker) and D2, then write `hiring-methodology.md`
 - `Hiring/` — job descriptions still to come: 2x Senior Brokerage Agent, Villa Sourcer, Property Acquisition Sourcer, Admin & Listings Coordinator. These come out of the methodology, not before it
 - `Training/` — empty, next: adapt `Bali Exception/Training/` (7 files, deal-lifecycle sales training) for BSH's comp structure, listings, and team
-- `Systems/` — empty, next: CRM + brokerage-website requirements spec
+- `Systems/crm-evaluation.md` — full CRM vendor evaluation. Need brief, build-vs-buy, longlist of 17 with elimination reasons, 3 scored finalists, integration architecture, 10 open verification items, trial plan, phased rollout. Recommendation: Zoho CRM Professional ($184/mo at 8 seats), backup Apimo CRM AI+ (€139/mo flat). No decision made, trials not started
+- `Systems/` — next: brokerage-website requirements spec, written against whichever CRM wins (the site reads listings from the CRM API, so the CRM decision comes first)
 
 ## Active Follow-ups
 
