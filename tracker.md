@@ -1,6 +1,6 @@
 # Bali Superhost — Project Tracker
 
-*Last updated: 2026-10-08*
+*Last updated: 2026-10-11 (CRM evaluation researched, Systems/ started)*
 
 ---
 
