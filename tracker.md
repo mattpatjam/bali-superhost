@@ -28,9 +28,24 @@ Negotiation and comp/ESOP terms are tracked separately at `Personal/Career/BSH-K
 | Hiring — methodology | In progress | Resolve D1 and D2 in `Hiring/adaptation-notes.md`, then write `hiring-methodology.md` (trait sheets per role, assessment method per trait, interview sequence, scorecard, decision rule) |
 | Hiring — job descriptions | Not started | Draft 4 JDs once the methodology defines the trait sheets |
 | Training program adaptation | Not started | Resume `Bali Exception/Training/`, adapt to BSH |
-| CRM/systems spec | Not started | Draft requirements, no CRM exists yet for brokerage |
+| CRM selection | Research complete, decision pending | Run 2-week parallel trials of Zoho CRM Pro and Apimo on real data (5 scenarios in `Systems/crm-evaluation.md` Section 9). Close the 10 open items in Section 8 first, items 1, 3 and 9 are the ones that could change the decision |
+| CRM — management approval | Not started | Pitch keeping HubSpot for management and adding a brokerage CRM. The argument is cost, not preference: HubSpot gates custom objects (so, property records) behind Enterprise, about $1,200/mo at 8 seats vs $184/mo for Zoho. See `Systems/crm-evaluation.md` Section 3 |
+| CRM — commission formulas | Not started | Matthieu to write out exact formulas for brokerage profit share (20%), PA overriding commission (15%), and co-broke splits. Blocks building the commission module in any CRM |
+| CRM — WhatsApp Coexistence check | Not started | Verify with a BSP whether Meta's Coexistence feature is available for Indonesian numbers. Determines whether agents keep their own WhatsApp linked to the CRM. Do not promise it to agents before this is confirmed |
+| Brokerage website spec | Blocked on CRM choice | Site reads listings from the CRM API, so design the property schema first, then the site around it |
 
 ## Session Log
+
+### 2026-10-11
+- Researched the brokerage CRM. Output: `Systems/crm-evaluation.md`.
+- Requirements gathered from Matthieu: keep HubSpot for management and run a brokerage CRM alongside with two-way sync on contacts and properties (managed villas get listed for sale, management clients become brokerage clients), buy not build (dev team is for glue, Bali Exception's in-house CRM is the counter-example), under 10 users and under $500/mo, live for day one, website and brand do not exist yet so the site gets built against the chosen CRM's API.
+- **Two findings that did most of the elimination work.** First, the US real estate CRM category does not transfer: Follow Up Boss, BoldTrail, Lofty, Sierra, BoomTown, Top Producer and the rest are built on MLS and IDX feeds, which Indonesia does not have. Second, HubSpot's custom objects are Enterprise only (confirmed on HubSpot's own KB, still true April 2026), so a villa has no object to live in without roughly $1,200/mo at 8 seats plus onboarding. That is the argument for management, and it is a cost argument rather than a taste one.
+- Attio ruled out on the same mechanism: custom objects are Pro only at $79/seat annual, about $632/mo at 8 seats. Good product, genuinely best-in-class MCP server, simply over budget for the object model needed. Would be viable at 4 seats.
+- Finalists scored one per category as requested. Zoho CRM Professional and Apimo CRM AI+ **tied at 4.16**, GoHighLevel scored 2.90 (no property object, no commission tracking, poor data export, prepaid wallet halts service when negative).
+- Tiebreak reasoning, worth keeping: Apimo wins the property model outright (purpose-built for international non-MLS markets, native matching, multi-currency, commission tracking, own website product, €139/mo flat at any seat count). Zoho wins the integration surface outright (official WhatsApp Cloud API included, official MCP server with a published Claude setup guide, native Slack and Google Drive, full REST API). Recommended Zoho because configuration work has a deadline and missing integration surface does not: Apimo had no HubSpot connector, no MCP, and unverified Slack and WhatsApp support, which is custom integration work against a smaller vendor's API for every stated requirement.
+- **WhatsApp answer to the "each agent uses their own number" question:** Meta now has an official feature called Coexistence that runs the Business app and the Cloud API on the same number simultaneously with real-time mirroring and no loss of chat history. Rolling out gradually, eligibility depends on country, BSP and the number, so it needs verifying for Indonesian numbers before promising it to agents. Unofficial QR-bridge tools are the real ban risk and are ruled out.
+- Closio Estate noted and set aside rather than scored: its ICP (Jakarta agencies, 5 to 50 agents) fits BSH's shape, but Matthieu has a commercial relationship with the product and that project's own disqualifier list excludes Bali and Lombok for competitive protection. Flagged for the conflict, raise separately if worth revisiting.
+- Nothing bought, no trial started, no vendor contacted.
 
 ### 2026-10-08
 - Started applying Roberge's *Sales Acceleration Formula* to BSH hiring. Wrote `Hiring/adaptation-notes.md`.
