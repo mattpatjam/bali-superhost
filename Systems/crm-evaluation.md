@@ -190,6 +190,68 @@ Weaknesses:
 
 ---
 
+## 5.1 Pros and Cons Against BSH's Actual Requirements
+
+Scored against what BSH specifically needs, not against generic CRM criteria. Apimo is included because it is the recommended backup and a decision table that omits the number two option is misleading.
+
+### Zoho CRM Professional ($184/mo at 8 seats)
+
+| Pros | Cons |
+|---|---|
+| Custom modules model the property exactly as Bali works: SHM, HGB, Hak Pakai, leasehold with years remaining, IDR and USD dual pricing, land in are and sqm | None of that exists on day one. It has to be built. Estimate 2 to 4 weeks of dev work before agents can use it |
+| Official WhatsApp Cloud API included in the plan, not a paid add-on. Cheapest full CRM with official API messaging | Buyer-to-listing matching is not native. Built with workflow rules and custom functions |
+| Official MCP server with a published Claude setup guide. Claude reads and writes records directly, no brittle middle layer. The only finalist that answers the AI requirement properly | Admin interface is dated and sprawling. Agent adoption depends entirely on how well the layouts get designed |
+| Native Slack and native Google Drive integrations, including attaching Drive files to custom module records | Professional caps custom modules and fields per module. Needs checking against the property schema before committing (open item 1) |
+| Full REST API and webhooks, so the website can be built against it cleanly | Listing photo handling is unproven at 25 to 40 images per villa. May need WorkDrive or Drive alongside (open item 2) |
+| HubSpot sync available three ways: Zoho Flow, Whalesync or Stacksync, HubSpot Operations Hub | No Indonesian data center. Australia or India has to be chosen deliberately |
+| Independent and profitable for 25+ years. No funding runway risk, no acquisition risk | Configuration knowledge becomes Zoho-specific. Portable data, less portable setup |
+| $184/mo leaves over $300/mo of budget free for the BSP and sync tooling | Per-seat pricing, so cost scales with headcount. At 25 agents this is $575/mo |
+
+### GoHighLevel Unlimited ($307/mo including WhatsApp add-on)
+
+| Pros | Cons |
+|---|---|
+| Flat rate with unlimited users and unlimited contacts. Going from 8 agents to 25 costs nothing extra | **No property object.** Everything is a contact and an opportunity. Villas, title types and dual-currency pricing have nowhere natural to live. This is disqualifying for a brokerage |
+| Website and funnel builder included, so the site requirement is partly solved in the same subscription | No commission split tracking. Profit share, PA overriding commission and co-broke would stay in spreadsheets |
+| Strongest of the three on lead nurture and speed-to-first-response. Missed-call text-back, booking calendar, automated reminders | No buyer-to-listing matching, because there are no listings to match against |
+| AI features are deeply integrated rather than bolted on | No official MCP server. Claude integration would be custom work against API v2 |
+| Two-way messaging, pipeline, booking and automation all in one place | Data export is the platform's known weak point. Snapshots are proprietary. Painful to leave in year two |
+| API access on the Unlimited tier supports a custom website build | Usage runs off a prepaid wallet and a negative balance halts services. For a brokerage whose WhatsApp line is its lifeline, that is an operational risk |
+| 14-day free trial on every plan | Built for US local service businesses and marketing agencies. Reviews consistently describe a hard first month |
+| | HubSpot sync only via Zapier or Make, no native connector |
+
+**Verdict:** wrong shape. A lead-nurture machine being asked to be a property database. Worth revisiting later as a marketing layer on top of a real CRM if lead generation becomes the bottleneck, never as the system of record.
+
+### Closio Estate (ruled out, see Section 3 Finding 3)
+
+Listed honestly, because the pros are real and the rejection should survive them.
+
+| Pros | Cons |
+|---|---|
+| Built for Southeast Asia, with a stated Bali presence. The only candidate not designed around a Western market | **Owned by Bali Exception, a direct BSH competitor.** BSH's entire book would sit in a competitor-administered database. Not fixable by contract. Disqualifying on its own |
+| Native WhatsApp, Instagram and portal inquiry handling, which is exactly how leads arrive in Bali | Procurement conflict. Matthieu did go-to-market work for the product and may hold a residual financial interest |
+| Likely handles IDR and Indonesian title types natively, without configuration | Entangles the open non-solicit and non-compete question with Bali Exception at the worst moment |
+| Local timezone support, unlike Apimo (Europe) or Zoho (India and Australia) | BSH's geography may already be excluded from Closio's target market for competitive protection. Possibly moot |
+| Matthieu already knows the product and the team, so evaluation would be fast | Exit risk. If the BE relationship sours, the system of record is controlled by someone with reason to make it difficult |
+| ICP of 5 to 50 agent agencies matches BSH's shape | No public pricing, no public API documentation, no published property schema. Depth unverified |
+| | Small vendor. Thin public evidence of customers, financial health, or security posture |
+| | No MCP server, so the Claude requirement would be custom work |
+
+**Verdict:** the product fit may well be good. It does not matter. The competitive exposure is structural, severe, and not reversible, and two alternatives exist that carry none of it.
+
+### Apimo CRM AI+ (€139/mo flat, recommended backup)
+
+| Pros | Cons |
+|---|---|
+| Purpose-built for international non-MLS real estate. Multilingual, multi-currency, adapted to local market regulations. Exactly the cross-border foreign-buyer situation Bali is | No HubSpot connector found. The sync would be custom work against both APIs or a middleware layer |
+| Property and client matching is native, not built. So is commission tracking, e-signature, client portal, lead capture and distribution | No MCP server and no published Claude path. The AI requirement would be custom work |
+| Flat rate at any seat count. 8 agents or 25 costs the same | WhatsApp and Slack support both unverified. Treat as absent until a demo proves otherwise |
+| Its own SEO-oriented website product with the CRM as listing source of truth. Solves the site requirement without a custom build | Using their website product is the fastest path and also the deepest lock-in. Listings and site live together |
+| Fastest of the four to a working system. Little configuration needed | French company, European timezone. Support responsiveness from Bali unknown |
+| Public API and 500+ claimed partner integrations | Little public evidence of Asian clients. Needs a reference call in or near the region |
+
+---
+
 ## 6. Recommendation
 
 **Primary: Zoho CRM Professional. Backup: Apimo CRM AI+.**
