@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSH · Brokerage Strategy Overview</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --paper: #FAF7F2;
+  --dark: #1B3A4B;
+  --accent: #D4774E;
+  --accent-light: #F5E4D8;
+  --gray: #8A8175;
+  --rule: #E0D9D0;
+  --green: #2E7D5B;
+  --green-light: #D4EDE3;
+  --yellow: #B8860B;
+  --yellow-light: #FBF2D8;
+  --red: #B84C3A;
+  --red-light: #F5E0DA;
+  --text: #1C1C1C;
+  --muted: #5A5550;
+}
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  background: #E8E3DC;
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.page {
+  max-width: 920px;
+  margin: 48px auto;
+  background: var(--paper);
+  padding: 64px 72px;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.14);
+}
+
+/* Header */
+.header { border-bottom: 2px solid var(--dark); padding-bottom: 36px; margin-bottom: 52px; }
+.eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+.header h1 { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: var(--dark); line-height: 1.1; }
+.header-sub { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--gray); font-style: italic; margin-top: 6px; }
+.header-meta { display: flex; gap: 32px; margin-top: 20px; flex-wrap: wrap; }
+.meta-item { font-size: 13px; color: var(--muted); }
+.meta-item strong { color: var(--text); font-weight: 600; }
+.summary-box { margin-top: 24px; background: var(--dark); color: rgba(255,255,255,0.92); padding: 20px 24px; font-family: 'Playfair Display', serif; font-size: 15px; font-style: italic; line-height: 1.7; }
+
+/* Section */
+.section { margin-bottom: 52px; }
+.section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; color: var(--dark); border-bottom: 1px solid var(--rule); padding-bottom: 12px; margin-bottom: 24px; }
+.lead { font-size: 15px; color: var(--muted); line-height: 1.75; margin-bottom: 24px; }
+
+/* Bullets inside boxes */
+.tight-list { margin: 6px 0 0 18px; padding: 0; }
+.tight-list li { margin-bottom: 5px; font-size: 13px; line-height: 1.5; color: var(--muted); }
+.tight-list li strong { color: var(--text); }
+.tight-list li:last-child { margin-bottom: 0; }
+
+/* Stat cards */
+.stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 8px; }
+.stat-card { background: #fff; border: 1px solid var(--rule); padding: 20px 20px; }
+.stat-label { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; }
+.stat-value { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: var(--dark); line-height: 1.1; }
+.stat-note { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+
+/* KPI grid */
+.kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+.kpi-card { background: #fff; border: 1px solid var(--rule); border-left: 3px solid var(--accent); padding: 16px 18px; }
+.kpi-num { font-size: 10px; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 5px; }
+.kpi-text { font-size: 13px; font-weight: 700; color: var(--dark); line-height: 1.4; margin-bottom: 10px; }
+.kpi-bar-wrap { display: flex; align-items: center; gap: 8px; }
+.kpi-bar { flex: 1; height: 4px; background: var(--rule); border-radius: 2px; overflow: hidden; }
+.kpi-bar-fill { height: 100%; background: var(--accent); border-radius: 2px; }
+.kpi-bar-text { font-size: 11px; color: var(--gray); white-space: nowrap; }
+.kpi-flag-note { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* Tables (shared) */
+.plan-table { width: 100%; border-collapse: collapse; border: 1px solid var(--rule); }
+.plan-table th { text-align: left; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gray); padding: 10px 16px; background: #fff; border-bottom: 2px solid var(--rule); }
+.plan-table td { padding: 13px 16px; font-size: 13px; border-bottom: 1px solid var(--rule); vertical-align: top; color: var(--muted); }
+.plan-table tr:last-child td { border-bottom: none; }
+.plan-table td:first-child { font-weight: 700; color: var(--dark); }
+
+/* Channel cards */
+.channel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.channel-card { background: #fff; border: 1px solid var(--rule); border-left: 4px solid var(--accent); padding: 20px 22px; }
+.channel-card.alt { border-left-color: var(--dark); }
+.channel-num { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+.channel-card.alt .channel-num { color: var(--dark); }
+.channel-title { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+.channel-desc { font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+/* Roadmap */
+.road-list { list-style: none; }
+.road-item { display: flex; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--rule); align-items: flex-start; }
+.road-item:last-child { border-bottom: none; }
+.road-phase { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--dark); width: 130px; flex-shrink: 0; }
+.road-tasks { list-style: none; flex: 1; }
+.road-tasks li { font-size: 13px; color: var(--muted); line-height: 1.5; padding: 3px 0 3px 14px; position: relative; }
+.road-tasks li::before { content: '–'; position: absolute; left: 0; color: var(--accent); }
+
+.tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; border-radius: 2px; margin-left: 8px; vertical-align: middle; }
+.tag.note { background: var(--yellow-light); color: var(--yellow); }
+
+/* Highlight / info / warn */
+.highlight-box { background: #fff; border: 1px solid var(--rule); border-left: 3px solid var(--green); padding: 16px 20px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+.highlight-box strong { color: var(--text); }
+.info-strip { background: #fff; border: 1px solid var(--rule); padding: 13px 18px; font-size: 13px; color: var(--muted); margin-top: 12px; line-height: 1.55; }
+.warn-strip { border-left: 3px solid var(--yellow); background: var(--yellow-light); padding: 12px 16px; font-size: 13px; color: #5A4010; line-height: 1.55; margin-top: 12px; }
+
+/* Timeline */
+.timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+.tl-step { background: #fff; border: 1px solid var(--rule); padding: 16px 16px; }
+.tl-when { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.tl-text { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* Funnel */
+.funnel-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.funnel-step { background: #fff; border: 1px solid var(--rule); border-left: 3px solid var(--accent); padding: 8px 12px; font-size: 11px; font-weight: 700; color: var(--dark); letter-spacing: 0.02em; }
+
+/* Footer */
+.footer { margin-top: 52px; padding-top: 20px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; }
+.footer-note { font-size: 12px; color: var(--gray); }
+.footer-date { font-family: 'Playfair Display', serif; font-size: 13px; color: var(--dark); font-style: italic; }
+
+@page { size: A4 portrait; margin: 16mm 18mm; }
+
+@media print {
+  html, body {
+    background: var(--paper) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body { font-size: 13px; }
+  .page { box-shadow: none; margin: 0; padding: 0; max-width: 100%; width: 100%; }
+  .header { padding-bottom: 24px; margin-bottom: 36px; }
+  .header h1 { font-size: 32px; }
+  .section { margin-bottom: 36px; }
+  .section-title { font-size: 18px; margin-bottom: 18px; break-after: avoid; page-break-after: avoid; }
+  .section-label { break-after: avoid; page-break-after: avoid; }
+  .stat-grid, .channel-grid, .timeline, .kpi-grid { gap: 8px; }
+  .highlight-box, .warn-strip, .info-strip, .channel-card, .kpi-card,
+  .stat-card, .road-item, .plan-table tr, .timeline {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="eyebrow">BSH · Kozystay Group</div>
+    <h1>Building the Brokerage</h1>
+    <div class="header-sub">Strategy &amp; 90-Day Roadmap</div>
+    <div class="header-meta">
+      <div class="meta-item"><strong>Prepared by</strong> — Matthieu Jammers</div>
+      <div class="meta-item"><strong>For</strong> — Ian (MD) &amp; Frans (CCO)</div>
+      <div class="meta-item"><strong>Date</strong> — July 7, 2026</div>
+      <div class="meta-item"><strong>Status</strong> — Strategy overview</div>
+    </div>
+    <div class="summary-box">
+      The brokerage starts from scratch, no sales track record today. But it already has something few independent brokerages in Bali have at this scale: 538 managed villas and the owners behind them. This sets out the strategy for turning that base into a brokerage business, and what it takes to resource it.
+    </div>
+  </div>
+
+  <!-- 01 — OPPORTUNITY -->
+  <div class="section">
+    <div class="section-label">01 · The Opportunity</div>
+    <div class="section-title">Why This Works</div>
+    <div class="lead">
+      A standalone brokerage spends its first year earning trust and building a pipeline. BSH starts with a warm book of owners who already trust the company. The real opportunity: every managed villa is a potential brokerage lead, and every villa the brokerage sells is a potential new management contract.
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-label">Managed Units Today</div>
+        <div class="stat-value">538</div>
+        <div class="stat-note">Full management units, April 2026</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Target</div>
+        <div class="stat-value">750</div>
+        <div class="stat-note">By December 31, 2027</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Market Position</div>
+        <div class="stat-value">No. 1</div>
+        <div class="stat-note">Largest villa rental manager in Bali</div>
+      </div>
+    </div>
+    <div class="highlight-box" style="margin-top:14px;">
+      <strong>One boundary to set from day one:</strong>
+      <ul class="tight-list">
+        <li>New business line from scratch under the BSH name, not a rebrand of management.</li>
+        <li>Owner base = warm leads, not a sales reputation.</li>
+        <li>Say this publicly early so owners, developers, and the market don't confuse it with management.</li>
+      </ul>
+    </div>
+    <div class="highlight-box" style="margin-top:14px;">
+      <strong>Why this matters to Kozystay:</strong>
+      <ul class="tight-list">
+        <li>Kozystay bought BSH to build the biggest villa management company in Bali and exit in 3-5 years.</li>
+        <li>Everything in this strategy, brokerage and PA, is in service of that number, not a side project running next to it.</li>
+        <li>Growing the managed portfolio faster than anyone else directly moves exit value.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 02 — COMPETITIVE LANDSCAPE -->
+  <div class="section">
+    <div class="section-label">02 · Competitive Landscape</div>
+    <div class="section-title">Who Else Is Already Here</div>
+    <div class="lead" style="margin-bottom:16px;">
+      25+ agencies already sell villas in Bali. No exclusivity, most overlap on the same inventory, that's why the owner-base edge matters more than marketing. Fee benchmark: 3-5% seller-paid, buyer doesn't pay.
+    </div>
+    <table class="plan-table">
+      <thead><tr><th>Type</th><th>Who</th><th>Why it matters here</th></tr></thead>
+      <tbody>
+        <tr><td>Combined sales + management</td><td>Oniriq Property (350+ units), Bali Home Immo, Betterplace, Yolla Group</td><td>Direct model competitors. Oniriq's 350+ is the closest management book to ours, still smaller.</td></tr>
+        <tr><td>Developer-partnership led</td><td>Legion Real Estate (40+ staff, ~600 sold/3.5yrs)</td><td>Same play as Channel 02. ~14/mo team-wide pace is a useful check on KPI 03.</td></tr>
+        <tr><td>International franchise</td><td>Ray White Kuta, Harcourts Purba Bali</td><td>Brand recognition we can't match day one, no owner-base edge either.</td></tr>
+        <tr><td>Legacy / boutique luxury</td><td>Exotiq (20+ yrs), Kibarer (since 2009), Bali Real Estate Consultants, Bali Treasure Properties, Propertia, Bali Villa Realty, a dozen smaller specialists</td><td>Long tail, mostly Instagram-native. The baseline everyone's already doing.</td></tr>
+        <tr><td>Proptech-turned-agency</td><td>FazWaz</td><td>Started as a portal, now an agency too, 5% baked into listed price. Channel and competitor.</td></tr>
+        <tr><td>Buyer-side only</td><td>Fuller's Properties</td><td>Pure buyer's agent, not a listing competitor, possible co-broke partner.</td></tr>
+        <tr><td>Sales-led generalist, no owner base</td><td>Bali Exception</td><td>Five years of inside-market knowledge benchmarked their playbook from real data. No management book behind it, exactly what Channel 01 beats.</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight-box" style="margin-top:16px;">
+      <strong>The benchmark to beat, not just a competitor:</strong>
+      <ul class="tight-list">
+        <li>FazWaz has expanded aggressively in the last ~6 months, 3+ new physical shops, plus listing partnerships with other agencies.</li>
+        <li>That's fast, structured, multi-pronged scaling, exactly the playbook that wins a fragmented market like this one.</li>
+        <li>BSH starts from a stronger base than FazWaz did, owner network, brand recognition, and should be able to run that playbook better and faster.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 03 — POSITIONING & DIFFERENTIATION -->
+  <div class="section">
+    <div class="section-label">03 · Positioning</div>
+    <div class="section-title">Positioning &amp; Differentiation</div>
+    <div class="highlight-box" style="margin-bottom:14px;border-left-color:var(--accent);">
+      <strong>Scaling faster than anyone, on purpose:</strong>
+      <ul class="tight-list">
+        <li>Most of the 25+ agencies in Section 02 don't have real operational structure, founder-led, ad hoc, small. FazWaz is the exception, it already has structure, that's exactly why it's scaling the way it is.</li>
+        <li>In a market this fragmented, winning isn't a clever angle, it's out-structuring and out-scaling everyone else, building the systems (Section 06) faster than they can grow organically.</li>
+        <li>BSH's edge on FazWaz specifically isn't structure, it's being the more Bali-based, better-known local brand, with the owner network already in place.</li>
+        <li>Everything below, listings edge, warm-lead engine, naming, is in service of that speed, not separate ideas.</li>
+      </ul>
+      <div style="margin-top:12px;"><span class="tag note">Framework</span> <span style="font-size:12px;color:var(--muted);">Constraint-first · stage-based build (offer → fulfillment → sales → ops) · scale order: More → Better → New</span></div>
+    </div>
+    <div class="warn-strip" style="margin-top:0;margin-bottom:14px;">
+      <strong>Differentiation, corrected:</strong>
+      <ul class="tight-list">
+        <li>Oniriq, Bali Home Immo, Betterplace, Yolla already combine sales + management, not a new idea.</li>
+        <li>The edge is scale, 538 units, bigger than any of theirs (Oniriq's 350+ is closest).</li>
+        <li>Pitch: "biggest warm-lead engine in the market."</li>
+      </ul>
+    </div>
+    <div class="highlight-box" style="margin-bottom:14px;">
+      <strong>Best listings, not most listings:</strong>
+      <ul class="tight-list">
+        <li>25+ agencies already (Section 02), no exclusivity, most overlap on the same inventory.</li>
+        <li>Inventory quality is the lever: owner-base access + a dedicated sourcing role (Section 06).</li>
+        <li>Secondary edge: real audited occupancy/revenue data across 538 villas, vs. competitors pitching projected yield.</li>
+      </ul>
+    </div>
+    <div class="highlight-box" style="margin-bottom:14px;">
+      <strong>Naming, the real issue:</strong>
+      <ul class="tight-list">
+        <li>Not about reputation risk crossing between the two businesses.</li>
+        <li>Bali Super Host is known as management, hard to also become known for sales under the same name.</li>
+        <li>Worth deciding whether the brokerage runs under its own identity rather than the same name.</li>
+      </ul>
+    </div>
+    <div class="highlight-box">
+      <strong>Listing selectivity:</strong>
+      <ul class="tight-list">
+        <li>Start unselective, like every other agency, at launch.</li>
+        <li>Every listing passes through the Head of Brokerage for approval before going live.</li>
+        <li>Refine the accepted tier as we grow and see what actually sells.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 04 — TARGET BUYERS & SALES PROCESS -->
+  <div class="section">
+    <div class="section-label">04 · Buyers &amp; Sales Process</div>
+    <div class="section-title">Target Buyers &amp; Sales Process</div>
+    <div class="highlight-box" style="margin-bottom:14px;">
+      <strong>Three buyer segments, tracked separately:</strong>
+      <ul class="tight-list">
+        <li><strong>Investment/lifestyle:</strong> expat, AU/EU/SG, yield-driven, USD 200-600K, feeds Channel 02 stock.</li>
+        <li><strong>Primary residence:</strong> growing segment, buying to live not to rent out, USD 500K+, different pitch, marketing, and property type.</li>
+        <li><strong>Value/branded hospitality:</strong> fully amenitized, branded-concept projects, hospitality-driven service, priced above the other two, market slowly maturing toward this.</li>
+      </ul>
+    </div>
+    <div class="warn-strip" style="margin-top:0;margin-bottom:14px;">
+      <strong>Sales funnel, needs to exist before Day 1-30 training:</strong>
+      <div class="funnel-row">
+        <div class="funnel-step">N/A</div>
+        <div class="funnel-step">Contacted</div>
+        <div class="funnel-step">Qualified</div>
+        <div class="funnel-step">Follow Up</div>
+        <div class="funnel-step">Negotiation</div>
+        <div class="funnel-step">PSA on Process</div>
+        <div class="funnel-step">Deposit</div>
+        <div class="funnel-step">Sold</div>
+      </div>
+      <div style="margin-top:8px;">Proposing a 60-day average cycle as a first benchmark. Track conversion at each stage from week one, so KPI 03 has a real base rate.</div>
+    </div>
+    <div class="highlight-box" style="margin-bottom:14px;">
+      <strong>Fee structure:</strong> ~5% seller-side commission, split with a co-broker where one's involved, consistent with the market (3-5%).
+    </div>
+    <div class="info-strip" style="margin-top:0;">
+      <strong>Channel 01 target:</strong> 8-10% of the 538-unit base converting to live listings within 12 months, a working assumption, stress-test once the sell-signal report is pulled (Days 1-30).
+    </div>
+  </div>
+
+  <!-- 05 — GO-TO-MARKET CHANNELS -->
+  <div class="section">
+    <div class="section-label">05 · Go-To-Market</div>
+    <div class="section-title">Four Revenue Channels</div>
+    <div class="highlight-box" style="margin-bottom: 16px;">
+      <ul class="tight-list">
+        <li><strong>Priority order:</strong> sales training + lead gen come first, day one, that's what drives revenue.</li>
+        <li>The channels below and Section 06 resourcing exist to support that, not replace it.</li>
+      </ul>
+    </div>
+    <div class="channel-grid">
+      <div class="channel-card">
+        <div class="channel-num">01</div>
+        <div class="channel-title">Owner-Base Cross-Sell</div>
+        <div class="channel-desc">Management into brokerage. Already know which owners show sell signals: falling occupancy, maintenance concerns, exit inquiries. Just need a process to act on it.</div>
+      </div>
+      <div class="channel-card alt">
+        <div class="channel-num">02</div>
+        <div class="channel-title">Developer &amp; Land Partnerships</div>
+        <div class="channel-desc">Priority: big developers with bigger projects, more units per deal. One large signing delivers a block of new management units in one motion, the fastest lever against the 750-unit target and the scaling thesis in Section 03. Feeds brokerage resale too, one pitch instead of two, the path to the 4 partnership agreements.</div>
+      </div>
+      <div class="channel-card alt">
+        <div class="channel-num">03</div>
+        <div class="channel-title">Outbound &amp; Agent Network</div>
+        <div class="channel-desc">Direct sourcing, marketing inbound, referral network, every hire trained on a structured process. The same approach proven over 5 years at Bali Exception, now backed by BSH's reach.</div>
+      </div>
+      <div class="channel-card">
+        <div class="channel-num">04</div>
+        <div class="channel-title">Post-Sale Handoff</div>
+        <div class="channel-desc">Brokerage back into management. Every villa sold is offered BSH management first, one transaction becomes a long-term relationship.</div>
+      </div>
+    </div>
+    <div class="highlight-box" style="margin-top:16px;">
+      <ul class="tight-list">
+        <li><strong>Existing agency listings:</strong> stop listing managed villas with outside agencies once brokerage is live.</li>
+        <li>Where an outside agency already has an active buyer, propose a co-listing/co-broke split instead of pulling it cold.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 06 — RESOURCING & TEAM -->
+  <div class="section">
+    <div class="section-label">06 · Resourcing</div>
+    <div class="section-title">Year 1 Team</div>
+    <div class="lead">Core hires, plus a shared legal resource from the management team, get the brokerage running. Filling these well takes longer than a quarter, especially the senior broker seats.</div>
+    <table class="plan-table" style="margin-bottom: 20px;">
+      <thead><tr><th>Role</th><th>Headcount</th><th>Focus</th></tr></thead>
+      <tbody>
+        <tr><td>Senior Brokerage Agent</td><td>2</td><td>Villa and land sales, expat-buyer focus, mirroring a proven production model</td></tr>
+        <tr><td>Listing Agents (Villa Sourcers)</td><td>2</td><td>Field role, out finding the best on- and off-market listings around Bali, not tied to one area. Distinct from PA Sourcer (management contracts) and Senior Brokers (closing). Serves "best listings" (Section 03).</td></tr>
+        <tr><td>Property Acquisition Sourcer</td><td>1</td><td>New unit sourcing, developer and owner relationships, feeds management contracts</td></tr>
+        <tr><td>Legal &amp; Due Diligence</td><td>Shared w/ Management</td><td>Contract review, title checks, due diligence before listing. Shared resource, not a new hire, needs brokerage-specific training</td></tr>
+        <tr><td>Admin &amp; Listings Coordinator</td><td>1</td><td>CRM, listing packages, follow-up tracking</td></tr>
+        <tr><td>Marketing &amp; Content</td><td>Shared / freelance</td><td>Photography, listing pages, paid social</td></tr>
+      </tbody>
+    </table>
+    <div class="highlight-box" style="margin-bottom: 14px;">
+      <ul class="tight-list">
+        <li><strong>All-in team cost:</strong> ~IDR 45-65M/month for the Year 1 hires (2 brokers, 2 listing agents, PA sourcer, admin), excludes marketing.</li>
+        <li>Size the budget conversation against this figure.</li>
+      </ul>
+    </div>
+    <div class="highlight-box" style="margin-bottom: 14px;">
+      <ul class="tight-list">
+        <li><strong>Systems:</strong> CRM + pipeline, a brokerage listing website connected to it, basic reporting. None of this exists yet, needs to be live before the team can produce.</li>
+        <li><strong>Open:</strong> who owns the CRM-website integration day to day, not yet assigned.</li>
+      </ul>
+    </div>
+    <div class="highlight-box" style="margin-bottom: 14px;">
+      <strong>Hiring profile:</strong> money-motivated, road-ready, no fear of the grind. Takes real time to find the right people, better to leave a seat open an extra month than fill it with the wrong one.
+    </div>
+    <div class="highlight-box" style="margin-bottom: 14px;">
+      <ul class="tight-list">
+        <li><strong>Team budget:</strong> the current model assumes IDR 15M/mo for a broker, IDR 25M/mo for a PA agent. Two brokers alone is IDR 30M, the entire stated budget, before anyone else exists.</li>
+        <li>Confirming real market rate is needed, with a fast approval path if the number moves.</li>
+      </ul>
+    </div>
+    <div class="highlight-box" style="margin-bottom:14px;">
+      <strong>Operating rhythm:</strong> weekly meetings per team (brokerage, PA/management, marketing), each focused on what needs to move that week, not a status report on everything.
+    </div>
+    <div class="highlight-box">
+      <ul class="tight-list">
+        <li><strong>Onboarding &amp; training:</strong> its own structured workstream, a checklist tied to the sales funnel (Section 04).</li>
+        <li>Slow ramp in the first 90 days is the most expensive kind, it compounds against every KPI (Section 08).</li>
+        <li><strong>Expect fast turnover early,</strong> that's normal, not a red flag. If someone's not landing it right away, train them before writing them off.</li>
+        <li><strong>Hard cut points:</strong> not trainable, can't learn, cut at week 3. No deal closed, cut at month 2.</li>
+      </ul>
+      <div style="margin-top:12px;"><span class="tag note">Framework</span> <span style="font-size:12px;color:var(--muted);">Document → Duplicate → Certify · checklist-first, not tribal knowledge · grade on process, not outcome</span></div>
+    </div>
+
+    <div class="section-label" style="margin-top:28px;margin-bottom:12px;">Management Growth: Targets &amp; Gaps</div>
+    <div class="highlight-box">
+      <ul class="tight-list">
+        <li><strong>+212 units:</strong> split roughly 60/40 between Channel 02 (developer/land, bigger blocks) and Channel 01/03 (individual sourcing). Prioritize big developers with bigger projects inside that 60%, fewer, larger deals get to scale faster than many small ones (Section 03).</li>
+        <li><strong>Gap:</strong> at the 3.0x/staff/month benchmark, one PA sourcer covers about a quarter of the ~12/month pace this needs.</li>
+        <li><strong>Churn:</strong> 750 by Dec 2027 reads as pure addition, propose a 5-8%/year churn assumption so the real target is gross, not net.</li>
+        <li><strong>Onboarding lag:</strong> track signed-to-live separately, 30-45 day target window, a signed deal sitting unlaunched isn't progress.</li>
+        <li><strong>Contract terms:</strong> management fee %, length, exclusivity, not yet defined. Needed before a sourcer can offer owners anything.</li>
+      </ul>
+    </div>
+
+    <div class="section-label" style="margin-top:28px;margin-bottom:12px;">Bali Super Legal — Proposed as Its Own Entity</div>
+    <div class="highlight-box">
+      <ul class="tight-list">
+        <li>Propose Legal &amp; Corporate Services (PT PMA, visas, accounting) as a <strong>separate entity</strong>, not just the shared due-diligence resource above.</li>
+        <li><strong>Self-funding:</strong> generates its own revenue, pays for its own costs, doesn't sit on the brokerage P&amp;L.</li>
+        <li><strong>Serves both sides:</strong> management contracts and brokerage sales both need it.</li>
+        <li>Precedent: Bali Exception and Bali Home Immo (Section 02) both already run this in-house.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 07 — ROADMAP -->
+  <div class="section">
+    <div class="section-label">07 · Execution</div>
+    <div class="section-title">90-Day Roadmap</div>
+    <ul class="road-list">
+      <li class="road-item">
+        <div class="road-phase">Days 1–30</div>
+        <ul class="road-tasks">
+          <li>Build the sales training program and lead generation engine</li>
+          <li>Build the marketing strategy with the marketing team before any ad spend</li>
+          <li>Hiring standards, SOPs for listing intake and commission/lead-routing rules</li>
+          <li>CRM and pipeline setup, decision on brokerage web presence</li>
+          <li>Pull the first owner sell-signal report from existing management data</li>
+          <li>Open the search for listing agents and PA sourcer (faster hires than senior brokers)</li>
+          <li>Confirm the legal resource-sharing arrangement, scope brokerage-specific training</li>
+        </ul>
+      </li>
+      <li class="road-item">
+        <div class="road-phase">Days 31–60</div>
+        <ul class="road-tasks">
+          <li>Marketing campaigns go live, reviewed and optimized as data comes in</li>
+          <li>Sales training runs with whoever's hired so far, lead generation live</li>
+          <li>PA sourcer starts first sourcing conversations toward the 4 partnership agreements</li>
+          <li>Legal (shared) trained on brokerage-specific due diligence, starts supporting deals</li>
+          <li>Senior broker search continues, no shortcut</li>
+        </ul>
+      </li>
+      <li class="road-item">
+        <div class="road-phase">Days 61–90</div>
+        <ul class="road-tasks">
+          <li>First pipeline review across whatever channels are live</li>
+          <li>Confirm commission and lead-routing rules between brokerage and PA</li>
+          <li>Finalize the handoff process with management</li>
+          <li>Recruit and adjust as the pipeline dictates, headcount isn't fixed at day 90</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 08 — KPI ALIGNMENT -->
+  <div class="section">
+    <div class="section-label">08 · KPI Alignment</div>
+    <div class="section-title">Year 1 Targets &amp; How This Plan Hits Them</div>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-num">KPI 01</div>
+        <div class="kpi-text">750 active management units by Dec 31, 2027</div>
+        <div class="kpi-bar-wrap"><div class="kpi-bar"><div class="kpi-bar-fill" style="width:72%;"></div></div><div class="kpi-bar-text">538 today → 750 target (+212)</div></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">KPI 02</div>
+        <div class="kpi-text">4 property management / developer partnership agreements signed</div>
+        <div class="kpi-bar-wrap"><div class="kpi-bar"><div class="kpi-bar-fill" style="width:0%;"></div></div><div class="kpi-bar-text">0 → 4 target</div></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">KPI 03</div>
+        <div class="kpi-text">3.0× new units per staff per month (PA team, excl. admin)</div>
+        <div class="kpi-bar-wrap"><div class="kpi-bar"><div class="kpi-bar-fill" style="width:0%;"></div></div><div class="kpi-bar-text">To confirm: which staff, which units</div></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-num">KPI 04</div>
+        <div class="kpi-text">IDR 2.0B Brokerage Business Unit EBITDA in 2027</div>
+        <div class="kpi-flag-note">Comfortably achievable under the revenue plan built for Year 1.</div>
+      </div>
+    </div>
+    <table class="plan-table">
+      <thead><tr><th>KPI</th><th>Driven By</th></tr></thead>
+      <tbody>
+        <tr><td>KPI 01 — 750 active units</td><td>Developer partnerships (Channel 02) + post-sale handoff back into management (Channel 04)</td></tr>
+        <tr><td>KPI 02 — 4 partnership agreements</td><td>Developer and land outreach, Channel 02, starting Days 31–60</td></tr>
+        <tr><td>KPI 03 — 3.0× units/staff/month</td><td>Sales training + lead gen shortening ramp, backed by CRM. Align on how this is measured before treating it as locked</td></tr>
+        <tr><td>KPI 04 — IDR 2.0B EBITDA</td><td>Owner cross-sell (01) and outbound (03), comfortably clears target under modeled volume</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 09 — VILLA MANAGEMENT -->
+  <div class="section">
+    <div class="section-label">09 · Beyond Brokerage</div>
+    <div class="section-title">Connecting Into Villa Management</div>
+    <div class="lead">
+      A concrete way to stay connected to management without pulling focus: a monthly touchpoint with the management ops lead, routing owner sell-signals into brokerage (Channel 01), and routing brokerage clients who want to reinvest into a BSH-managed unit.
+    </div>
+    <div class="highlight-box" style="margin-bottom: 14px;">
+      <strong>Time cost:</strong> roughly half a day a month, enough to keep the two businesses talking, not an operational role.
+    </div>
+    <div class="highlight-box">
+      <ul class="tight-list">
+        <li><strong>The incentive question:</strong> management is measured on retention, natural instinct to hold onto an owner rather than hand them to brokerage.</li>
+        <li>Not a reason to avoid this, it's the reason to bring it in-house, an owner who wants out sells one way or another.</li>
+        <li>Only real choice: through us, buyer offered BSH management first, or through an outside agent, losing both the sale and the contract.</li>
+      </ul>
+    </div>
+    <div class="highlight-box" style="margin-top:14px;">
+      <strong>CRM ownership:</strong> Admin &amp; Listings Coordinator (Section 06) owns the brokerage CRM day to day. Management ops feeds it a monthly sell-signal export until real integration exists.
+    </div>
+  </div>
+
+  <!-- 10 — TIMELINE -->
+  <div class="section">
+    <div class="section-label">10 · Timeline</div>
+    <div class="section-title">What Happens After We Align</div>
+    <div class="timeline">
+      <div class="tl-step"><div class="tl-when">Week 1</div><div class="tl-text">Terms confirmed, contract drafted</div></div>
+      <div class="tl-step"><div class="tl-when">Week 2–3</div><div class="tl-text">First hires (PA sourcer, admin), CRM setup begins</div></div>
+      <div class="tl-step"><div class="tl-when">Month 2</div><div class="tl-text">Senior brokers hired, first outreach campaign live</div></div>
+      <div class="tl-step"><div class="tl-when">Day 90</div><div class="tl-text">Full pipeline review across all four channels</div></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-note">Brokerage strategy overview</div>
+    <div class="footer-date">Matthieu Jammers</div>
+  </div>
+
+</div>
+</body>
+</html>
