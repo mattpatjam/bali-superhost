@@ -167,7 +167,7 @@ Two practical cautions:
 
 ## 9. Closio Estate: Capability and Conflict
 
-This section is written for disclosure rather than analysis, and should remain in the business plan rather than being summarised away.
+This section exists to disclose a conflict. It should stay in the business plan in full.
 
 **Closio is the closest product fit of anything reviewed.** Its modules cover leads and pipeline, contacts, owner listing requests, property listings, calendar, messages, email broadcasts, documents, reporting and built-in calculators for rental yield, commission and price per square metre. Its AI agent replies to buyers in over 30 languages, qualifies on budget, purpose and timeline, scores the lead, proposes only the agency's own listings, books viewings and hands over to a named agent. Lead capture spans WhatsApp, Instagram, Facebook, portals, website and email, with each lead source-tagged and assigned automatically. It is multi-language including Bahasa Indonesia, it ships iOS and Android applications, and onboarding is included.
 
