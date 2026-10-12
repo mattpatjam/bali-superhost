@@ -303,6 +303,56 @@ How the pieces actually connect, assuming Zoho.
 
 ---
 
+## 7.1 WhatsApp Messaging Economics (changed 1 October 2026)
+
+Meta changed WhatsApp pricing eleven days before this was written. Most vendor pages and blog posts still describe the old model. Anything online saying "service replies are free" is now wrong.
+
+**The three rules that govern everything:**
+
+- **24-hour customer service window.** A client message opens a 24-hour timer and each new client message resets it. Inside the window, free-form messages of any kind, including AI-generated replies. Outside it, only pre-approved templates.
+- **Templates require Meta approval and explicit opt-in.** You cannot write a drip sequence and schedule it. Every business-initiated message is reviewed before it can send. "They gave us their number once" is not opt-in.
+- **Quality rating throttles sending.** Spam-shaped sequences drop the rating and Meta restricts the number. A restricted brokerage number in launch month would be severe.
+
+**What changed on 1 October 2026:**
+
+- Free-form replies inside the 24-hour window are now **billed per message**. They were free until 30 September.
+- Utility templates inside the window are now billed per message too.
+- **AI-generated messages are billed as a separate and more expensive category**, Meta Business Agent messages, explicitly excluded from the free entry point. One BSP estimates roughly $0.04 to $0.05 per message.
+- Marketing templates remain the most expensive category with no volume discount, as before.
+
+**The offset:** Click-to-WhatsApp ads open a **72-hour free entry point window**, which runs on a separate timer from the 24-hour service window. For a brokerage running Meta ads into WhatsApp, which is the likely primary lead source, those conversations are free for 72 hours. This materially changes lead-gen economics in BSH's favour.
+
+**Cost model for an AI qualifying bot:** a 10-message qualifying conversation costs roughly $0.40 to $0.50. At 200 inbound leads per month that is $80 to $100. Against agent time spent asking the same five qualifying questions two hundred times, that is cheap. Design implication: keep bot replies short. Long multi-turn flows now cost real money per turn.
+
+**Verify Indonesian rates with the BSP before committing.** Rates vary by market and these are days old.
+
+---
+
+## 7.2 Zoho Automation, and What Actually Reaches WhatsApp
+
+Zoho's automation is four separate layers, and the plan gating matters for the cost case.
+
+| Layer | What it does | Plan required |
+|---|---|---|
+| Workflow Rules | Trigger on record create, edit or field update. Actions: email, task, field update, webhook, custom function | Standard. 50 per module, 200 on Enterprise |
+| Cadences | Multi-step sequential follow-up, the closest thing to an email sequence | Standard, up to 70 active per module with add-ons |
+| Blueprint | Enforces a process stage by stage so agents cannot skip steps | **Professional** |
+| Custom Functions (Deluge) | Zoho's scripting language. Can call any REST API, including Meta's Graph API directly | **Professional** |
+
+Professional at $23/seat is the tier that unlocks Blueprint and Deluge. That is the recommended tier anyway, so no cost change. Note that **Zia AI suggestions are Enterprise only** ($40/seat), which is worth knowing before anyone assumes Zia is included.
+
+**Cadences support WhatsApp follow-ups.** Confirmed on Zoho's own help documentation and release notes. This is the sequence capability, and it works the way WhatsApp requires: pre-approved templates only, and only if WhatsApp Business is enabled on the account. So a follow-up cadence can be built, but every step is a template that Meta approved and every send is billed.
+
+**Meta Lead Ads reach the CRM through Zoho Social**, not Zoho CRM directly. The integration captures leads in real time and maps up to 20 Lead Ad form fields to CRM fields. Fine for inbound.
+
+**Known gap worth planning around:** the native integration captures leads into the CRM but does not reliably send conversion events back to Meta. That means Meta's ad algorithm cannot optimise toward closed deals, only toward form fills. For a brokerage where a lead is worth very different amounts depending on budget, that is a real limitation. The fix is Meta's Conversions API, which Deluge can call directly. Build it in Phase 3, not at launch.
+
+**Open conflict to resolve in trial:** Zoho's documentation indicates workflow rules can trigger WhatsApp messages, but there are user reports on Zoho's own community forum complaining that the WhatsApp integration lacks workflow support. These may be different features or different vintages. **Do not assume this works. Test it explicitly.** It is exactly the kind of thing that reads fine on a feature page and breaks in practice, and the whole follow-up automation case depends on it.
+
+**Deluge is the escape hatch.** Anything the native integrations do not cover, custom functions can reach by calling the Meta Graph API directly. That is the reason the dev team matters, and it is a capability Apimo and GoHighLevel do not match.
+
+---
+
 ## 8. Open Items to Verify Before Signing
 
 Nothing here should be assumed. Each of these could change the decision.
