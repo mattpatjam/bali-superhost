@@ -226,9 +226,39 @@ Scored against what BSH specifically needs, not against generic CRM criteria. Ap
 
 Listed honestly, because the pros are real and the rejection should survive them.
 
+**Pricing obtained 2026-10-12.** From `Closio-Pricing-Internal-EN.pdf`, the vendor's internal sales reference dated Oct 2026 ("quote calculator v3"), which Matthieu holds from the `Bali Exception/crm-sales` go-to-market work. The document is marked INTERNAL, DO NOT PUBLISH, and instructs staff never to put CRM or AI numbers in public material. Matthieu was advised of the confidentiality and disclosure risks and directed on 2026-10-12 to include the figures anyway. They appear in the BSH-facing report with their source stated, rather than as market research.
+
+| Line | Price (monthly, USD) |
+|---|---|
+| CRM Starter, up to 3 users | $99 |
+| CRM Pro, up to 5 users ("most agencies land here") | $189 |
+| CRM Enterprise, unlimited, multi-branch, SLA | Quote only, never public |
+| Additional user, Starter or Pro | $25 each |
+| AI agent, 200 conversations | $129 ($0.645 per thread) |
+| AI agent, 500 conversations | $249 ($0.498) |
+| AI agent, 900 conversations | $399 ($0.443) |
+| AI agent, 1,500 conversations | $599 ($0.399) |
+| AI agent, pay as you go | $0.75 per conversation |
+| Closio Sites (website synced to CRM, WhatsApp button, no setup fee) | $79 |
+| Annual billing | 20% off every recurring line |
+
+A conversation means one buyer thread in a month regardless of message count. Overage above a pack bills at the PAYG rate. Grid is USD base global; IDR quotes are USD times a default rate of 16,500, with Indonesian agencies quoted off a separate IDR grid. Sites is the only price Closio publishes openly.
+
+**BSH scenario at 8 users:** CRM Pro $189 plus 3 extra seats at $25 is $264. AI pack at roughly 200 leads/month is $129 (no headroom) or $249 (safe). Sites $79 if used.
+
+| Configuration | Monthly | Annual billing |
+|---|---|---|
+| Pro + AI 200, no Sites | $393 | $314 |
+| Pro + AI 200 + Sites | $472 | $378 |
+| Pro + AI 500 + Sites | $592 | $474 |
+| At 25 users (Pro + 20 extra + AI 900 + Sites) | $1,167 | $934 |
+
+**Conclusion: the pricing strengthens the existing rejection and changes nothing.** Closio runs 2 to 2.5x Zoho ($184) and hits the $500 ceiling once the AI pack is sized honestly. It also scales badly, since every seat above five adds $25, against GoHighLevel's flat $307 at any headcount. The one genuinely favourable element is the per-thread AI model at $0.40 to $0.65 per buyer thread, which compares well with Meta's per-message billing, though whether Meta pass-through sits on top of Closio's packs is unstated.
+
 | Pros | Cons |
 |---|---|
 | Built for Southeast Asia, with a stated Bali presence. The only candidate not designed around a Western market | **Owned by Bali Exception, a direct BSH competitor.** BSH's entire book would sit in a competitor-administered database. Not fixable by contract. Disqualifying on its own |
+| Per-thread AI pricing ($0.40 to $0.65) is a cleaner model than per-message billing, and bundles the AI agent rather than charging a platform fee for it | 2 to 2.5x the cost of Zoho, at the $500 ceiling once the AI pack is realistic, and $1,167/mo at 25 agents |
 | Native WhatsApp, Instagram and portal inquiry handling, which is exactly how leads arrive in Bali | Procurement conflict. Matthieu did go-to-market work for the product and may hold a residual financial interest |
 | Likely handles IDR and Indonesian title types natively, without configuration | Entangles the open non-solicit and non-compete question with Bali Exception at the worst moment |
 | Local timezone support, unlike Apimo (Europe) or Zoho (India and Australia) | BSH's geography may already be excluded from Closio's target market for competitive protection. Possibly moot |
