@@ -1,6 +1,6 @@
 # Bali Superhost — Project Tracker
 
-*Last updated: 2026-10-12 (Closio ruled out, pros/cons tables, WhatsApp economics + Zoho automation researched)*
+*Last updated: 2026-10-12 (Context/ folder added with interview-stage reference docs)*
 
 ---
 
