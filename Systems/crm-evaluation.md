@@ -387,6 +387,7 @@ Phased, because the website and the HubSpot sync do not have to block launch.
 | 2026-10-11 | Attio ruled out | Custom objects are Pro only, about $632/mo at 8 seats, over budget |
 | 2026-10-11 | GoHighLevel ruled out as system of record | No property object, no commission tracking, poor data portability |
 | 2026-10-11 | Zoho CRM recommended, Apimo backup | Tied on score, Zoho's weakness is fixable in weeks and Apimo's is not |
+| 2026-10-12 | Closio ruled out, framing hardened | Originally logged as a personal conflict of interest. Corrected: the disqualifying issue is structural, Bali Exception owns the product and is a direct BSH competitor in the same geography. Adopting it puts BSH's entire book in a competitor-administered database. Disclose to BSH management proactively rather than on request |
 | | Final selection | Pending trials |
 
 **Renewal tracking:** set once a contract is signed. Note the notice period and put the renewal date minus 60 days in the calendar, with an owner.
