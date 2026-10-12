@@ -177,12 +177,12 @@ For a Bali brokerage selling to foreign buyers over WhatsApp, this is close to a
 
 Adopting Closio would place BSH's complete brokerage book inside a database owned and administered by that competitor: every lead, every listing, every seller contact, every negotiated price, every commission split and every agent's activity. No confidentiality clause resolves this, because it asks a competitor to hold the book and undertake not to read it.
 
-**Further disclosure.** The author of this report previously carried out go-to-market work for Closio while employed at Bali Exception. That history is disclosed here so BSH can weigh this recommendation accordingly. The recommendation is to decline the product.
+**My own position, stated plainly.** While I was at Bali Exception I did go-to-market work for Closio. I am raising that here rather than waiting to be asked, and BSH should weigh my recommendation with it in mind. My recommendation is that we do not buy the product.
 
 **Two secondary considerations:**
 
-- Non-solicitation and non-competition terms between the author and Bali Exception are not yet settled in writing. Becoming a paying customer of Bali Exception's product while BSH recruits in the same market would complicate that position.
-- Closio's own published target market excludes Bali and the surrounding islands for competitive protection, so BSH may fall outside the territory it serves regardless.
+- My non-solicitation and non-competition terms with Bali Exception are not yet settled in writing. BSH becoming a paying customer of their product while we recruit in the same market would complicate that.
+- Closio's published target market excludes Bali and the surrounding islands for competitive protection, so BSH may fall outside the territory it serves regardless.
 
 **Recommendation: decline, on governance grounds rather than capability.** The cost of excluding Closio is low, because workable alternatives exist. The cost of being wrong is the loss of competitive information to a rival, which cannot be undone. Should BSH wish to reconsider, the conditions would be passive and arm's-length ownership, no financial interest held by any BSH employee, and written board approval. The data exposure would remain even then.
 
