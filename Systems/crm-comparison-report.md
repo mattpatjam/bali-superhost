@@ -52,20 +52,33 @@ All figures verified against vendor pricing pages in October 2026. Annual billin
 
 | | Zoho CRM Pro | Zoho One | GoHighLevel | Closio | Apimo |
 |---|---|---|---|---|---|
-| Model | Per seat | Per employee | Flat | Custom quote | Flat |
-| Headline | $23/seat/mo | $37/user/mo | $297/mo | Not published | €139/mo |
-| Cost at 8 users | $184/mo | $296/mo | $307/mo | Unknown | ~$150/mo |
-| Cost at 25 users | $575/mo | $925/mo | $307/mo | Unknown | ~$150/mo |
-| 3-year cost at 8 users | $6,624 | $10,656 | $11,052 | Unknown | $5,400 |
-| WhatsApp cost | Included in plan | Included | $10/mo add-on | Included in quote | Unverified |
-| Onboarding fee | None | None | None | Included in price | Not published |
+| Model | Per seat | Per employee | Flat | Tiered plus usage | Flat |
+| Headline | $23/seat/mo | $37/user/mo | $297/mo | $189/mo to 5 users | €139/mo |
+| Cost at 8 users | $184/mo | $296/mo | $307/mo | $393 to $592/mo | ~$150/mo |
+| Cost at 25 users | $575/mo | $925/mo | $307/mo | ~$1,167/mo | ~$150/mo |
+| 3-year cost at 8 users | $6,624 | $10,656 | $11,052 | ~$13,608 | $5,400 |
+| WhatsApp cost | Included in plan | Included | $10/mo add-on | AI packs, see below | Unverified |
+| Onboarding fee | None | None | None | Included | Not published |
+| Annual discount | 20% | 20% | Yes | 20% | Not published |
 | Meta message fees | On top, all vendors | | | | |
+
+**Closio figures: source and status.** Closio does not publish CRM or AI pricing. Its public pricing page offers a custom quote only. The figures above come from a Closio internal sales reference dated October 2026, which I retained from go-to-market work I did for the product while at Bali Exception (see Section 9). They are accurate as at that date but are not public, not quoted to BSH, and should be treated as indicative. Any real number would come from a quote.
+
+Closio's structure, for completeness:
+
+- CRM Starter $99/mo up to 3 users. CRM Pro $189/mo up to 5 users. Additional users $25/mo each on both. Enterprise is quote only.
+- The AI agent is a separate module priced by conversation volume, where one conversation means one buyer thread in a month regardless of message count: 200 threads $129, 500 threads $249, 900 threads $399, 1,500 threads $599, or $0.75 per thread with no commitment. Overage above a pack bills at the per-thread rate.
+- Closio Sites, a website synced to the CRM, $79/mo with no setup fee.
+- 20% discount on annual billing across all three lines.
+
+At 8 users BSH would need CRM Pro at $189 plus three additional seats at $25, so $264, plus an AI pack sized to roughly 200 leads per month at $129 to $249, plus Sites at $79 if used. That is $393 to $592 monthly, or $314 to $474 on annual billing.
 
 Notes that matter for budgeting:
 
 - **Zoho One is cheaper than Zoho CRM Professional plus SalesIQ bought separately** ($296 against $344) and includes roughly 45 additional applications. The constraint is that Zoho One is licensed per employee, so every BSH employee would need a seat. Worth checking before assuming the saving.
 - **GoHighLevel's flat rate becomes compelling above about 13 users** and never increases. Its disqualification is functional, not financial.
-- **Closio publishes no pricing.** The quote is assembled from team size, monthly AI conversation volume and onboarding scope, after a 30-minute demonstration. For a business plan, an unquantified line item is itself a problem.
+- **Closio costs roughly two to two and a half times the recommended option** and reaches the $500 ceiling once the AI pack is sized for real volume. It also scales poorly, because every user above five adds $25, putting a 25-agent team near $1,167 per month.
+- **Closio's per-thread AI pricing compares well on its own terms.** Packs work out at $0.40 to $0.65 per buyer thread against Meta's per-message billing elsewhere. Whether Meta's pass-through fees sit on top of Closio's packs is not stated and would need confirming.
 - **Meta's WhatsApp message fees apply on top of every option.** See Section 8.
 
 ---
