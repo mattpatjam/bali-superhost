@@ -92,7 +92,7 @@ Longlist considered: HubSpot (Pro and Enterprise), Attio, Pipedrive, Zoho CRM, Z
 | Follow Up Boss, BoldTrail, Lofty, Top Producer, CINC, Real Geeks, iHomefinder, Wise Agent | MLS and IDX dependent. See Section 3, Finding 1. |
 | Propertybase / Lone Wolf | Salesforce-based, enterprise pricing and implementation cycle. Wrong scale and wrong timeline. |
 | Rex Software | Right market model (non-MLS), public API, quote-only pricing, AU-specific portals. Hold as backup. |
-| Closio Estate | Already known from the `Bali Exception/crm-sales` go-to-market work. Its ICP is Jakarta agencies of 5 to 50 agents, which fits BSH's shape. Two problems: Matthieu has a commercial relationship with the product, and the Bali/Lombok geography is explicitly excluded in that project's own disqualifier list for competitive protection. Flagged for the conflict of interest, not evaluated further here. Raise separately if worth revisiting. |
+| Closio Estate | **Ruled out on competitive exposure. See Section 3, Finding 3.** |
 
 **Three finalists, one per category, as requested:**
 
