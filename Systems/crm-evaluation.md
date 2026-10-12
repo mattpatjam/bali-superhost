@@ -369,6 +369,10 @@ Nothing here should be assumed. Each of these could change the decision.
 | 8 | HubSpot record ownership rules with management | The sync cannot be switched on without this agreed | Matthieu + management |
 | 9 | Commission model: exact formulas for brokerage profit share, PA overriding commission, and co-broke splits | Needed before anyone builds the commission module | Matthieu |
 | 10 | Who administers the CRM day to day | A tool with no owner sits unused. Likely the Admin & Listings Coordinator role already planned in `Hiring/` | Matthieu |
+| 11 | **Can Zoho workflow rules actually trigger WhatsApp sends** | Docs say yes, Zoho's own community has users saying no. The entire follow-up automation case depends on it. Test explicitly, do not take the feature page at face value | Trial |
+| 12 | Indonesian WhatsApp message rates post 1 Oct 2026, from the BSP | Pricing changed 11 days ago and varies by market. The bot's running cost is unknown until this is quoted | Matthieu + BSP |
+| 13 | Zoho One ($37/user, so $296/mo at 8) vs CRM Pro + SalesIQ Enterprise ($344/mo) | Zoho One is cheaper and includes ~45 more apps, but is licensed per employee so everyone at BSH would need a seat. Check whether that is viable before assuming the saving | Matthieu + BSH |
+| 14 | Whether Meta Conversions API work is needed at launch or Phase 3 | Native Lead Ads integration captures leads but does not send conversion events back to Meta, so ads optimise toward form fills rather than closed deals. Deluge can call the Conversions API, but it is build work | Dev team |
 
 ---
 
