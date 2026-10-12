@@ -76,6 +76,22 @@ The workarounds are both bad:
 
 **This is the argument to take to management.** It is not a preference or a taste question. HubSpot charges Enterprise prices for the one capability a brokerage cannot operate without, and a purpose-built alternative includes it at a tenth of the cost. Keeping HubSpot for management and adding a brokerage CRM is the cheaper option, not the indulgent one.
 
+**Finding 3: Closio is disqualified because a direct competitor owns it.**
+
+Closio Estate is owned by Bali Exception, Matthieu's former employer and a direct BSH competitor in the same geography, for the same villas, the same sellers, and the same buyers.
+
+Adopting it would put BSH's entire brokerage book inside a database that a competitor owns and whose backend their staff administers: every lead, every listing, every seller contact, every negotiated price, every commission split, every agent's activity. No contractual confidentiality clause resolves this. It asks a competitor to hold your book and promise not to read it.
+
+That alone ends it. Three secondary issues reinforce it:
+
+- **Procurement conflict.** Matthieu did go-to-market work for Closio through `Bali Exception/crm-sales`. Any residual revenue share, referral arrangement, equity, or unfinished engagement makes him a buyer with a financial interest in the vendor he is selecting.
+- **Non-compete entanglement.** Non-solicit and non-compete status with Bali Exception is already an open blocking item for BSH hiring. Becoming a paying customer of BE's product while recruiting from Bali agencies and competing for their listings hands BE a commercial lever at the worst possible moment.
+- **It may not be available anyway.** The `crm-sales` disqualifier list excludes Bali, Lombok, Sumbawa and the Gilis from Closio's target market for competitive protection. BSH's geography may already be off-limits.
+
+**Action: rule it out, and disclose it proactively to BSH management** rather than waiting to be asked. State that Closio exists, that BE owns it, that there is a prior commercial relationship, and that it was excluded for those reasons. The cost of exclusion is near zero because two viable alternatives exist. The cost of being wrong is leaking competitive intelligence to a rival, which is not reversible.
+
+The only conditions under which this would be worth reopening: BE's ownership is genuinely passive and arm's length, Matthieu holds zero financial interest, and BSH management approves in writing. Even then the competitive data exposure remains and the upside over Zoho is marginal.
+
 ---
 
 ## 4. Shortlist
