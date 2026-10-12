@@ -389,6 +389,7 @@ Then run these five scenarios in both, and time them:
 3. **Publish a price change.** Change a listing price and confirm it reaches the website, or in the trial, confirm the API exposes the change and a webhook fires.
 4. **Log a WhatsApp conversation.** Inbound message to the brokerage number, assigned to an agent, replied to, and visible on the contact record afterwards.
 5. **Calculate a commission.** One closed deal with a co-broke split, agent commission, and BSH profit share. Does the system produce the numbers, or does it still need a spreadsheet?
+6. **Fire an automation into WhatsApp.** Build one workflow rule that sends a WhatsApp message on a record change, and one Cadence with a WhatsApp follow-up step. This resolves open item 11 and is the single highest-risk assumption in the whole stack. If it fails, the follow-up automation case has to be rebuilt around a dedicated WhatsApp platform like respond.io, which adds roughly $199/mo.
 
 Also, during the trial window:
 - Submit a real support ticket to each vendor and time the response. This is the cheapest vendor-health signal available.
