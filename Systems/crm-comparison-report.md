@@ -262,7 +262,9 @@ Adopting Closio would place BSH's complete brokerage book inside a database owne
 **Disadvantages**
 
 - Owned by a direct competitor. Disqualifying on its own.
-- No published pricing. An unquantified line in a business plan.
+- Roughly two to two and a half times the cost of the recommended option, reaching the $500 ceiling once the AI pack is sized for real lead volume.
+- Scales poorly on headcount. Every user above five adds $25, so a 25-agent team approaches $1,167 per month against GoHighLevel's flat $307.
+- No published pricing. Every figure in this report comes from an internal document rather than a quote, so BSH cannot verify it without engaging the vendor.
 - No public API documentation, which affects website integration, HubSpot synchronisation and future automation.
 - No HubSpot, Slack or MCP integration offered.
 - Small vendor with five client logos and three public reviews. Limited evidence of financial stability or security posture.
