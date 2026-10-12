@@ -184,7 +184,7 @@ Adopting Closio would place BSH's complete brokerage book inside a database owne
 - My non-solicitation and non-competition terms with Bali Exception are not yet settled in writing. BSH becoming a paying customer of their product while we recruit in the same market would complicate that.
 - Closio's published target market excludes Bali and the surrounding islands for competitive protection, so BSH may fall outside the territory it serves regardless.
 
-**Recommendation: decline, on governance grounds rather than capability.** The cost of excluding Closio is low, because workable alternatives exist. The cost of being wrong is the loss of competitive information to a rival, which cannot be undone. Should BSH wish to reconsider, the conditions would be passive and arm's-length ownership, no financial interest held by any BSH employee, and written board approval. The data exposure would remain even then.
+**Recommendation: decline. The reason is governance, not capability.** Excluding Closio costs us little, because workable alternatives exist. Being wrong about it costs us our competitive information, permanently. If BSH wants to reopen this, the conditions would be passive arm's length ownership, no financial interest held by anyone at BSH, and written board approval. The data exposure would still be there.
 
 ---
 
