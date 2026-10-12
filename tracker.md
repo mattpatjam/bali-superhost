@@ -1,6 +1,6 @@
 # Bali Superhost — Project Tracker
 
-*Last updated: 2026-10-11 (CRM evaluation researched, Systems/ started)*
+*Last updated: 2026-10-12 (Closio ruled out on competitive exposure, pros/cons tables added)*
 
 ---
 
