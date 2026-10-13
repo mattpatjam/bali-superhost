@@ -159,7 +159,11 @@ Closio's automation is narrower but aimed precisely at this industry. Routing le
 
 The practical question is how much work stands between signing and agents using the system.
 
+**Apimo: fastest of the credible options.** The property model, matching and commission tracking are supplied rather than built, so little configuration stands between signing and use. The work moves instead to the integration side, where it is less bounded.
+
 **Zoho: two to four weeks of configuration.** The property module, matching logic and commission calculations are all buildable and none exist on day one. This is known, bounded work for the development team. The risk is that a poorly designed layout kills agent adoption, so the configuration should be judged on how fast an agent can enter a villa, not on how complete the field list looks.
+
+**Odoo: comparable build time to Zoho, with a higher adoption risk.** The property model is built in Odoo Studio, which is capable but is the same two to four weeks of work. The distinct concern is the interface. Odoo is designed for operations and finance staff at a desk, not for salespeople working from a phone between viewings, and it is the densest of the candidates to learn. This is the one factor that could rule out an option that is otherwise the cheapest and the cleanest architecturally, and it cannot be judged from a feature list. The trial should put two agents in front of it unassisted and watch what happens.
 
 **GoHighLevel: fast to stand up, wrong shape underneath.** Reviews consistently describe a difficult first month because the platform exposes everything at once without a guided order. The deeper issue is that no amount of configuration produces a property object.
 
