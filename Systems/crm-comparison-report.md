@@ -177,6 +177,10 @@ This matters more than usual because the brokerage website does not exist yet. B
 
 **Zoho.** No website product. The site gets built by the development team against Zoho's REST API, with webhooks triggering an update when a property record changes. Most control, most work, no lock-in. The property schema should be designed first and the site built around it.
 
+**Odoo.** Includes a website builder in the same subscription, so the site could either be built in Odoo directly or built separately against its API. Building it in Odoo is fast and keeps listings and site in one system. Building it against the API gives design freedom, which matters for a brokerage selling on presentation quality. The second route is probably correct, but the first exists as a fallback if the launch timeline tightens.
+
+**Apimo.** Has its own search-oriented website product with the CRM as the listing source of truth, which solves the website requirement in the same purchase. It is the fastest route and also the deepest lock-in, since listings and site then live together and leaving means rebuilding both.
+
 **GoHighLevel.** Website and funnel builder included. Good for landing pages and lead capture, poor as a property catalogue, because the underlying records are contacts and opportunities rather than listings.
 
 **Closio.** Connects to an existing website and syncs listings automatically, with publish, update and remove driven from the CRM. A website is explicitly not included, though the vendor will build one as a separately quoted project.
