@@ -457,6 +457,8 @@ Meta changed WhatsApp pricing eleven days before this was written. Most vendor p
 
 ## 7.2 Zoho Automation, and What Actually Reaches WhatsApp
 
+> **Largely superseded 2026-10-13.** The central risk in this section, whether Zoho workflow rules can reliably trigger WhatsApp sends, no longer decides anything: respond.io owns WhatsApp sending and has its own native automation and sequence builder. Open item 11 below is downgraded from blocking to irrelevant for the CRM choice. What survives and still matters: the Zoho plan gating table (Blueprint and Deluge need Professional, Zia needs Enterprise), the Meta Lead Ads capture path, and the Conversions API gap, which applies whichever CRM wins. Kept in full because the plan gating feeds the cost case.
+
 Zoho's automation is four separate layers, and the plan gating matters for the cost case.
 
 | Layer | What it does | Plan required |
