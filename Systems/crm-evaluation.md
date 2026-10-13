@@ -190,7 +190,7 @@ GoHighLevel loses on the thing a brokerage needs most and is no longer a serious
 
 Strengths:
 - Custom modules let the dev team model Properties, Viewings, and Commission Splits exactly as Bali works: SHM, HGB, Hak Pakai, leasehold with years remaining, IDR and USD dual pricing, land size in are and sqm. Nothing has to be bent to fit a US convention.
-- Official WhatsApp Cloud API support is built into the paid plans, not an add-on. Cheapest full CRM with official API messaging included.
+- ~~Official WhatsApp Cloud API support is built into the paid plans, not an add-on. Cheapest full CRM with official API messaging included.~~ *Struck 2026-10-13: respond.io holds the WhatsApp numbers, so this is no longer a differentiator. It would only matter if the brokerage ran a separate second number outside respond.io, which is not the proposal.*
 - Official Zoho MCP server with a published Claude setup guide. This is the single clearest differentiator for the AI requirement. Claude can read and write CRM records directly rather than through a brittle middle layer.
 - Native Slack integration and native Google Drive integration, including attaching Drive files to custom module records.
 - Full REST API, webhooks, and Zoho Flow for the HubSpot sync.
