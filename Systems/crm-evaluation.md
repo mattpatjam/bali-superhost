@@ -372,31 +372,59 @@ Each finalist now wins on a different axis, and which axis matters most is a jud
 
 ## 7. Integration Architecture
 
-How the pieces actually connect, assuming Zoho.
+*Rewritten 2026-10-13. The previous version assumed the CRM would own WhatsApp and sync to HubSpot. Both assumptions are gone.*
+
+**The shape of it: each system keeps the job it already does well, and the CRM is given exactly one job.**
+
+```
+respond.io          →   CRM            →   Odoo (finance)
+(conversations)         (records)          (invoice, revenue)
+WA/FB/IG/TikTok         property           commission booked
+guest + acquisition     deal, viewing
+                        commission calc
+                            ↓        ↑
+                        website    Guesty
+                        (listings) (ADR, occupancy)
+                            ↓
+                        Slack, Drive, Claude
+```
+
+**respond.io, the conversation layer and the capture point**
+- respond.io keeps every channel and every number. The CRM never touches WhatsApp. This is the single biggest change from the first draft.
+- A phone number can only be registered to one WhatsApp Business Account at a time, so this is not a preference, it is a constraint. The same number cannot be on respond.io and a CRM simultaneously.
+- The handoff to build: when a conversation is qualified as a brokerage lead, it becomes a CRM contact and deal, with the respond.io thread link stored on the record. Direction is respond.io to CRM for creation, CRM to respond.io for context (budget, area, stage) so whoever picks up the chat can see it.
+- **None of the three finalists has a native respond.io connector.** HubSpot does, which is worth noting honestly, but HubSpot cannot hold a property. For Zoho, Apimo and Odoo the path is respond.io webhooks plus the CRM's API, or Zapier or Integrately as an interim. Budget dev time for this in Phase 1, not Phase 3. It is the lead capture path, so it cannot be late.
+- **Open question for the reservation team, not for IT:** brokerage buyer threads and guest inquiries currently share one inbox and one contact pool. Decide whether the brokerage gets its own workspace, its own channels, or just its own tags. This affects respond.io's monthly active contact tier and therefore the bill.
+
+**Odoo, the finance endpoint**
+- Closed deal produces a commission calculation, which produces an invoice and a journal entry. If Odoo wins the CRM decision, this is internal and free. If Zoho or Apimo wins, this is a second integration to build and maintain.
+- That asymmetry is the strongest single argument for Odoo and it is not fully reflected in the scorecard. Section 5 says so explicitly.
+
+**HubSpot, and whether it survives**
+- *Changed 2026-10-13. Previously framed as a required two-way sync. It is now an open recommendation to retire it.*
+- **Option A, consolidate.** Migrate management's pipeline into the chosen CRM and drop HubSpot. At Starter tier, with no custom objects and only contacts and deals to move, this is a small migration. It deletes the two-way sync build, the $45/mo sync tooling, and the record-ownership rules below, which were going to be a standing source of conflict between two systems fighting over the same phone number as a key.
+- **Option B, keep it.** Two honest arguments: it is management's tool and the politics of removing it may cost more than the sync does, and respond.io's native HubSpot connector already works today whereas the respond.io to Zoho/Apimo/Odoo path has to be built.
+- **Suggested position:** propose Option A, but do not make it a condition of the CRM decision. Decide the CRM on the property and commission model, prove the new system in Phase 1, then propose consolidation separately. Trying to take HubSpot off management in week two is how the whole thing loses approval.
+- If Option B is chosen, the ownership rule still has to be agreed before the sync is switched on: management owns the record for management clients, the brokerage owns it for brokerage-sourced leads, matched on phone number, owning side wins on conflict.
+
+**Guesty, read-only, new in this draft**
+- Not a CRM candidate, but an asset the first draft missed. Guesty's Open API exposes listings, reservations and journal entries.
+- Use case: pull real ADR and occupancy from the managed portfolio into buyer-facing ROI numbers. A brokerage selling income-producing villas that can show actual performance data from its own management arm, rather than projections, has something most Bali agencies cannot produce.
+- Low priority for launch, high value once listings are selling on investment returns. Phase 3 or later.
 
 **Website (the listing site)**
-- The CRM is the single source of truth for listings. Nothing is ever entered on the website.
-- The site is built after the CRM is chosen, reading from the Zoho CRM API, with webhooks triggering a rebuild or cache invalidation when a property record changes.
-- Since the brand does not exist yet, this is the easy case. Design the property schema first, then design the site around it. Not the reverse.
-
-**HubSpot, two-way**
-- Sync contacts and deals only. Properties stay brokerage-side, because HubSpot cannot hold them without Enterprise.
-- Options: Zoho Flow (cheapest, already in the Zoho ecosystem), Whalesync or Stacksync (purpose-built two-way sync, visual setup, no code), or HubSpot Operations Hub Starter at $45/mo.
-- Ownership rules have to be decided before switching the sync on, or the two systems will fight. Proposal: management owns the record for management clients, the brokerage owns it for brokerage-sourced leads, matched on phone number as the shared key, with the owning side winning on conflict. Confirm with management.
-
-**WhatsApp**
-- Brokerage main number: onto the official Cloud API, inside the CRM, with per-conversation assignment to an agent. This is the standard supported pattern and it gives ownership, routing, and an audit trail.
-- Agents' own numbers: there is now an official Meta feature called **Coexistence** that lets the WhatsApp Business app and the Cloud API run on the same number simultaneously, mirroring messages in real time, without losing chat history. That is exactly what you asked for. Two caveats: it is rolling out gradually and eligibility depends on country, BSP, and the number itself, so it has to be verified for Indonesian numbers with the chosen BSP before anything is promised to agents. Also, onboarding an existing Business app number to the Cloud API unlinks its companion devices.
-- **Do not use QR-code or unofficial WhatsApp bridges.** They are the actual ban risk, as opposed to multi-agent access done officially, which is fine. A banned brokerage number in week three would be a disaster.
-- Without Coexistence, the fallback is the standard pattern: one official company number as the inbound and automation channel, agents keep personal numbers in the app, and personal threads are not logged. Acceptable to launch on, worth fixing later.
+- Unchanged. The CRM is the single source of truth for listings. Nothing is ever entered on the website.
+- Built after the CRM is chosen, reading from the CRM API, with webhooks triggering a rebuild or cache invalidation when a property record changes.
+- Design the property schema first, then the site around it. Not the reverse.
 
 **Claude**
-- Zoho MCP server, with the official Claude setup guide. Lets Claude query pipeline, draft follow-ups, and write records directly.
-- First use cases worth building: a daily "who is owed a follow-up" brief, drafting WhatsApp and email follow-ups from the record history, and triaging new inbound leads against live inventory.
+- Zoho is the only finalist with an official MCP server and a published Claude setup guide. Odoo would run through JSON-RPC or a community MCP server. Apimo has no published path.
+- First use cases regardless of which CRM wins: a daily "who is owed a follow-up" brief, drafting follow-ups from record history for a human to send through respond.io, and triaging new inbound leads against live inventory.
+- Note the draft-and-review rule applies: Claude drafts the follow-up, a person sends it. Nothing goes to a lead automatically.
 
 **Slack and Google Drive**
-- Both native Zoho CRM integrations. Slack for deal and listing alerts into a channel. Drive for attaching mandates, title documents, and photos to property records.
-- Check whether listing photos belong in Drive or in Zoho WorkDrive. Photos are a volume problem the CRM may not handle well.
+- Slack is native in all three finalists. Deal and listing alerts into a channel.
+- Drive for mandates, title documents and photos attached to property records. Check whether listing photos belong in Drive or in the CRM's own file store. 20 to 40 photos per villa is a volume problem most CRMs handle badly.
 
 ---
 
