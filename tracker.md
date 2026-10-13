@@ -1,6 +1,6 @@
 # Bali Superhost — Project Tracker
 
-*Last updated: 2026-10-12 (Context/ folder added with interview-stage reference docs)*
+*Last updated: 2026-10-13 (existing BSH tool stack disclosed, both CRM docs revised, Zoho recommendation withdrawn)*
 
 ---
 
