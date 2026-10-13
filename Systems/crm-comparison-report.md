@@ -191,6 +191,8 @@ All three put the CRM in charge of listings. The difference is how much BSH buil
 
 ## 8. WhatsApp and Agent Follow-Up
 
+*Revised 13 October 2026. This section no longer bears on the CRM choice, because respond.io holds BSH's WhatsApp channels and will continue to. It is retained in full because the economics below are unchanged by that, and they govern what BSH pays to run brokerage conversations through respond.io. The questions move from the CRM vendors to the reservation team and to respond.io.*
+
 WhatsApp deserves its own section because it does not behave like email, and because Meta changed the economics on 1 October 2026.
 
 **The three rules:**
