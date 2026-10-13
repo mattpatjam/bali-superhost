@@ -348,24 +348,25 @@ A conversation means one buyer thread in a month regardless of message count. Ov
 
 ---
 
-## 6. Recommendation
+## 6. Position, Not Recommendation
 
-**Primary: Zoho CRM Professional. Backup: Apimo CRM AI+.**
+*Rewritten 2026-10-13. The previous version recommended Zoho with Apimo as backup. That recommendation rested on two things the existing stack has removed: Zoho's included WhatsApp Cloud API, and the assumption that HubSpot was the only incumbent. It is withdrawn, not reversed. There is no recommendation in this document until Section 8.1 is answered.*
 
-The two tie on score, so the tiebreaker is which weakness is fixable.
+**Where it actually stands: three candidates, a 0.19 scorecard spread, and one blocking unknown.**
 
-- Zoho's weakness is that the property model has to be configured. That is 2 to 4 weeks of dev work, it is a known quantity, and the dev team already exists.
-- Apimo's weakness is that the integration surface is missing. HubSpot, Slack, WhatsApp and Claude are either absent or unverified. That is not configuration work, it is custom integration against a smaller vendor's API for every single one of the stated requirements.
+Each finalist now wins on a different axis, and which axis matters most is a judgement call that belongs to the group, not to one person reading vendor pages.
 
-Configuration work has a deadline. Missing integration surface does not.
+| Candidate | Wins on | Loses on | Pick it if |
+|---|---|---|---|
+| **Odoo Custom** | Commission and finance in one database. No sixth tool. Cheapest. Best data portability | Agent adoption risk. No MCP. Property model has to be built | The group's priority is one fewer system and commissions that reconcile themselves, and agents will be trained properly |
+| **Apimo CRM AI+** | Property model and buyer matching native on day one. Fastest to a working system. Flat rate at any headcount | Thinnest integration surface, now against respond.io and Odoo. Lock-in if the website product is used. No Asian reference clients found | The group's priority is launching in weeks with no build, and accepting glue work later |
+| **Zoho CRM Pro** | Best integration surface. Only candidate with an official MCP server and documented Claude setup. Deluge as an escape hatch | Property model has to be built. Commission sits apart from finance. Dated admin UI | The group's priority is the Claude workflows and long-term flexibility, and the dev team has capacity |
 
-Zoho also happens to be the only finalist that answers the Claude requirement properly, with an official MCP server and documented Claude setup. Given how much of BSH's intended workflow runs through Claude, that is not a minor line item.
+**The honest summary for the discussion:** Apimo is the fastest to working, Odoo is the cleanest architecture and the cheapest, Zoho is the most flexible and the best Claude story. Nothing in the research separates them decisively, so the decision should turn on what BSH actually values most, which is a conversation that has not happened yet.
 
-**Choose Apimo instead if, during trials, either of these turns out true:**
-- The property schema cannot be built cleanly inside Zoho Professional's custom module and field limits
-- The team has no appetite for configuration work and needs something that works on day one with no build
+**What should not be reopened.** The eliminations in Sections 3 and 4 are structural, not preference-based, and the new information does not touch them: no MLS in Indonesia, no custom objects below HubSpot Enterprise, and Closio sits inside a direct competitor. Those stay closed.
 
-**Budget headroom:** at $184/mo, Zoho leaves over $300/mo of the budget free. Spend some of it on a WhatsApp BSP and the HubSpot sync tool, and keep the rest as reserve. Do not spend it on seats.
+**Budget position.** All three finalists sit well inside the $500/mo ceiling: Odoo about $120, Apimo about $150, Zoho about $184. The ceiling is no longer a constraint on the CRM choice. It does now need to absorb incremental respond.io seats and contact tiers, which the first draft did not account for.
 
 ---
 
