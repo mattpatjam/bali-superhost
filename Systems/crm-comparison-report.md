@@ -1,24 +1,35 @@
 # CRM Selection Report: BSH Brokerage
 
 *Prepared for inclusion in the BSH brokerage business plan*
-*Date: 12 October 2026*
+*Date: 12 October 2026. Revised 13 October 2026.*
 *Prepared by: Matthieu Jammers, Director of Business Development*
+*Status: for discussion. No selection made.*
+
+> **Revision note, 13 October 2026.** The first version of this report was written without a full picture of the systems BSH already runs. It assumed HubSpot was the only incumbent. BSH in fact operates respond.io for omnichannel messaging, HubSpot Starter for pipeline, Slack, Guesty for property management and Odoo for finance. Two of those overlap directly with what the CRM was being asked to do. The report has been revised accordingly: WhatsApp is no longer a CRM requirement, Odoo has been added as a candidate, and the recommendation has been withdrawn pending the internal questions set out in Section 11.
 
 ---
 
 ## 1. Executive Summary
 
-The BSH brokerage launches without a CRM, without a listing website, and without a property database. BSH Management runs HubSpot. This report evaluates whether the brokerage should join HubSpot or run its own system, and which system that should be.
+The BSH brokerage launches without a CRM, without a listing website, and without a property database. It does, however, operate inside an existing stack of five systems. This report evaluates what the brokerage needs, which candidates can provide it, and what remains to be decided internally.
 
-**Recommendation: keep HubSpot for management, and run Zoho CRM Professional for the brokerage, synced to HubSpot on contacts and deals.**
+**There is no single recommendation at this stage, and that is a deliberate change from the 12 October draft.** Three candidates finish within 0.19 of each other on a weighted scorecard, which is not a meaningful gap. Each wins on a different axis, and which axis matters most is a decision for BSH collectively rather than a conclusion research can reach.
 
-Cost: $184 per month at 8 users, or $296 per month on Zoho One if BSH licenses company-wide. Both sit well inside a $500 monthly budget.
+| Candidate | Monthly at 8 users | Strongest on | Weakest on |
+|---|---|---|---|
+| **Odoo CRM, Custom plan** | ~$120 | Commissions and finance in one database. Already in the stack | Agent adoption risk. Property model must be built |
+| **Apimo CRM AI+** | ~$150 | Property model native on day one. Fastest to operational | Thinnest integration surface |
+| **Zoho CRM Professional** | ~$184 | Integration surface. Only candidate with a supported Claude route | Property model must be built. Commissions sit apart from finance |
 
-Three findings drive the recommendation:
+All three sit well inside a $500 monthly budget, so cost is not the deciding factor.
 
-**HubSpot cannot hold a property record at a price BSH should pay.** Custom objects are gated to HubSpot's Enterprise tier. Professional offers only contacts, companies, deals and tickets, and a villa is none of those. Putting the brokerage on HubSpot means roughly $1,200 per month at 8 seats plus a required onboarding fee, to obtain an object that alternatives include as standard. This is a cost argument, not a preference.
+**Four findings drive the analysis:**
+
+**HubSpot cannot hold a property record at any tier BSH would buy.** Custom objects are gated to HubSpot's Enterprise tier. Every tier below it, including the Starter plan BSH runs today at $15 per seat, offers only contacts, companies, deals and tickets, and a villa is none of those. Reaching the tier that can hold a villa means roughly $1,200 per month at 8 seats plus a required onboarding fee, against the $120 per month BSH currently pays. This is a structural argument, not a preference.
 
 **Most real estate CRMs on the market do not work in Indonesia.** Follow Up Boss, BoldTrail, Lofty, Top Producer and similar platforms are built around MLS and IDX feeds, which do not exist here. Their principal value does not transfer, while their pricing does.
+
+**Odoo deserves consideration precisely because BSH already runs it.** It is the only candidate that could calculate a commission split and book the resulting invoice in the same database, with no synchronisation to build or reconcile. It is also the only option that does not add a sixth system. Its viability depends on which Odoo plan BSH holds, which is the single blocking question in this report.
 
 **The strongest product fit carries a governance problem BSH should decline.** Closio Estate matches the brokerage's requirements more closely than any other candidate reviewed. It is owned by Bali Exception, a direct competitor. Section 9 covers this in full, and recommends against adoption on those grounds alone.
 
