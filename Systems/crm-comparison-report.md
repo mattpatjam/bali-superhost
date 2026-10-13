@@ -285,7 +285,6 @@ Adopting Closio would place BSH's complete brokerage book inside a database owne
 **Advantages**
 
 - Custom modules model Indonesian property precisely: title types, lease years remaining, dual-currency pricing, local land measurement. Nothing is forced into a foreign market's conventions.
-- Official WhatsApp Cloud API included in the plan rather than sold as an add-on.
 - Official MCP server with published Claude setup, the only candidate answering the AI requirement through a supported route.
 - Native Slack, Gmail, Google Calendar and Google Drive integration.
 - Full REST API, webhooks and Deluge scripting, so the development team can reach anything the native integrations miss, including Meta's Conversions API.
