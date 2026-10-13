@@ -145,11 +145,16 @@ Longlist considered: HubSpot (Pro and Enterprise), Attio, Pipedrive, Zoho CRM, Z
 | Rex Software | Right market model (non-MLS), public API, quote-only pricing, AU-specific portals. Hold as backup. |
 | Closio Estate | **Ruled out on competitive exposure. See Section 3, Finding 3.** |
 
-**Three finalists, one per category, as requested:**
+**Finalists, revised 2026-10-13:**
 
-1. **Zoho CRM Professional** ($23/seat/mo annual) — the flexible CRM shaped into a real estate system
-2. **Apimo CRM AI+** (€139/mo flat) — the opinionated real estate product built for international non-MLS markets
-3. **GoHighLevel Unlimited** ($297/mo flat) — the marketing-led all-in-one
+1. **Zoho CRM Professional** ($23/seat/mo annual, about $184/mo at 8 seats), the flexible CRM shaped into a real estate system
+2. **Apimo CRM AI+** (€139/mo flat, about $150/mo), the opinionated real estate product built for international non-MLS markets
+3. **Odoo CRM, Custom plan** (Indonesia tier, roughly $15/user/mo, about $120/mo at 8 seats), **added 2026-10-13**, the incumbent finance platform extended into brokerage
+4. **GoHighLevel Unlimited** ($297/mo flat), retained for the record only, see the verdict in Section 5
+
+**Why Odoo is now on the list.** BSH already runs Odoo for finance. Odoo's subscription includes every app, so CRM, Sales, Documents and Accounting sit in one database, and the Custom plan includes Odoo Studio for building custom models, which is how the property object would be created. Indonesia tier pricing is roughly $15/user/mo on Custom (around Rp255,000), so eight seats is near $120/mo, and existing finance users are already licensed. Most importantly, it is the only candidate that can calculate a commission split and book the resulting invoice in the same system, which is the stated 180-day success criterion.
+
+**Why GoHighLevel is now redundant as well as unsuitable.** Its strongest feature was the conversations and nurture layer. respond.io already does that across more channels and is already staffed. GHL was eliminated as a system of record on 2026-10-11, and the existing stack removes its consolation prize too.
 
 ---
 
