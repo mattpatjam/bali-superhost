@@ -254,7 +254,24 @@ Scored against what BSH specifically needs, not against generic CRM criteria. Ap
 | Full REST API and webhooks, so the website can be built against it cleanly | Listing photo handling is unproven at 25 to 40 images per villa. May need WorkDrive or Drive alongside (open item 2) |
 | HubSpot sync available three ways: Zoho Flow, Whalesync or Stacksync, HubSpot Operations Hub | No Indonesian data center. Australia or India has to be chosen deliberately |
 | Independent and profitable for 25+ years. No funding runway risk, no acquisition risk | Configuration knowledge becomes Zoho-specific. Portable data, less portable setup |
-| $184/mo leaves over $300/mo of budget free for the BSP and sync tooling | Per-seat pricing, so cost scales with headcount. At 25 agents this is $575/mo |
+| $184/mo leaves over $300/mo of budget free for sync tooling and reserve | Per-seat pricing, so cost scales with headcount. At 25 agents this is $575/mo |
+| | **No native respond.io connector.** Zapier or Integrately only, so the lead capture handoff is glue the dev team builds and maintains (added 2026-10-13) |
+| | **Commission lives in a different system from finance.** Calculating a split in Zoho and booking it in Odoo is a second integration to build (added 2026-10-13) |
+
+### Odoo CRM, Custom plan (about $120/mo at 8 seats, Indonesia tier)
+
+*Added 2026-10-13. Conditional on BSH running the Custom plan or self-hosted Enterprise. If BSH is on Odoo Standard, there is no Studio and no external API, and Odoo is out.*
+
+| Pros | Cons |
+|---|---|
+| **Already in the stack and already paid for on the finance side.** Not a sixth tool. The only candidate that reduces tool count rather than adding to it | **Nobody has confirmed which plan BSH holds.** Standard has no Studio and no external API access, which eliminates Odoo outright. This is the single blocking question |
+| **Commission and finance in one database.** Brokerage profit share at 20%, PA overriding commission at 15% and co-broke splits calculate in the same system that issues the invoice and books the revenue. No sync, no reconciliation, no spreadsheet | Property schema still has to be built in Studio. Same 2 to 4 weeks as Zoho, not less. Odoo has no native real estate object |
+| Odoo Studio builds custom models no-code, so the property object can carry SHM, HGB, Hak Pakai, lease years remaining, dual IDR and USD pricing, land in are and sqm | **Highest agent adoption risk of any finalist.** Odoo's interface is built for operations and finance staff, not for salespeople working from a phone between viewings. This is the main reason it scores 2.5 on operational fit |
+| Indonesia tier pricing is roughly $15/user/mo on Custom. Cheapest finalist, and finance users are already licensed | No official MCP server. Claude access would be via Odoo's JSON-RPC or XML-RPC API, or a community MCP server. Zoho keeps a real edge here |
+| All apps included in one subscription: CRM, Sales, Documents, Accounting, Website, Sign. The listing site could be built in Odoo Website or against the API | Buyer-to-listing matching is not native and would be built, same as Zoho |
+| Full external API on Custom, plus webhooks, so the listing website can be built against it cleanly | Multi-company configuration needs care if brokerage and management are separate legal entities. Available on Custom, but it is setup work and a permissions question |
+| Open source core, so data and schema portability are the best of any finalist. Lowest lock-in risk scored | No native respond.io connector. Zapier or Integrately only, same glue problem as Zoho |
+| Management already knows the tool, so there is no second vendor relationship, no second contract, no second security review | Per-seat pricing, so cost scales with headcount, though from a much lower base than Zoho |
 
 ### GoHighLevel Unlimited ($307/mo including WhatsApp add-on)
 
