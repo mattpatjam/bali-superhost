@@ -207,21 +207,26 @@ WhatsApp deserves its own section because it does not behave like email, and bec
 
 **Cost model for AI qualification:** a ten-message qualifying exchange costs roughly $0.40 to $0.50. At 200 inbound leads per month, that is $80 to $100. Set against agent hours spent asking the same five qualifying questions repeatedly, the economics are favourable.
 
-**Agent follow-up, by vendor:**
+**Agent follow-up, as it will actually work.** The vendor comparison that previously sat here has been removed, because the channel does not run through the CRM in any scenario. The arrangement is:
 
-| | Zoho | GoHighLevel | Closio |
-|---|---|---|---|
-| Official WhatsApp Cloud API | Included in paid plans | $10/mo add-on | Included |
-| Template sequences | Cadences support WhatsApp follow-up steps | Campaigns | Not specified |
-| AI qualification bot | SalesIQ Zobot, $20/operator | Included | Core product feature, 30+ languages |
-| Multi-agent assignment | Yes | Yes | Yes, routed by language and listing type |
-| Billing model | Meta rates | Prepaid wallet | Within quoted conversation volume |
+| Function | System |
+|---|---|
+| WhatsApp, Facebook, Instagram, TikTok channels | respond.io |
+| Conversation routing and assignment | respond.io |
+| AI qualification of inbound inquiries | respond.io, if BSH chooses to enable it for brokerage threads |
+| Template sequences and follow-up sends | respond.io |
+| Who is owed contact, and the draft of what to say | CRM, with Claude reading the record |
+| Record of what was sent, against the contact | CRM, written back from respond.io |
 
-Two practical cautions:
+Follow-ups are therefore drafted from the CRM and sent from respond.io by a person. Nothing is sent to a client automatically.
 
-**Agents keeping their own WhatsApp numbers** is possible through Meta's Coexistence feature, which runs the Business app and the Cloud API on one number simultaneously without losing history. Availability depends on country, provider and the individual number, so it must be confirmed for Indonesian numbers before anything is promised to agents. Unofficial QR-code bridging tools carry a genuine risk of the number being banned and should not be used.
+Three practical points:
 
-**GoHighLevel bills usage from a prepaid wallet, and a negative balance halts service.** For a brokerage whose WhatsApp line is its primary channel, that is an operational risk rather than an accounting detail.
+**The brokerage's share of respond.io cost is not yet established.** Pricing runs per plan plus monthly active contacts, with Starter at $79 per month for five users and Growth at $159 per month for ten users and 1,000 monthly active contacts, additional users at $12 to $20 each. Adding four to six brokerage agents and their buyer threads has a real cost against the $500 ceiling and needs confirming with whoever administers the account.
+
+**Brokerage threads and guest threads currently share one inbox and one contact pool.** Whether the brokerage should have a separate workspace, separate channels, or only separate tags affects the contact tier, the bill, and whether concierge staff can see buyer negotiations. This is a decision for the reservation team, and it should be made before brokerage agents are added rather than after.
+
+**Agents keeping their own WhatsApp numbers** is possible through Meta's Coexistence feature, which runs the Business app and the Cloud API on one number simultaneously without losing history. Availability depends on country, provider and the individual number, so it must be confirmed for Indonesian numbers with respond.io before anything is promised to agents. Unofficial QR-code bridging tools carry a genuine risk of the number being banned and should not be used.
 
 ---
 
