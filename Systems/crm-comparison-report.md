@@ -350,21 +350,37 @@ Adopting Closio would place BSH's complete brokerage book inside a database owne
 
 ---
 
-## 11. Recommendation and Rollout
+## 11. What Needs Deciding, and Rollout
 
-**Select Zoho CRM Professional.** Confirm whether Zoho One at $296 per month is viable given its per-employee licensing, since it is cheaper than buying CRM and SalesIQ separately and includes considerably more.
+*Rewritten 13 October 2026. The previous version selected Zoho with Apimo as the alternative. That selection rested on Zoho including WhatsApp at no extra cost and on HubSpot being the only incumbent system. Neither holds. The selection is withdrawn rather than replaced: three candidates finish within 0.19 of each other, and the deciding factor is a question of BSH's priorities rather than a research finding.*
 
-**Hold Apimo as the alternative.** A French platform built for international non-MLS markets at €139 per month flat, with native property matching, multi-currency handling, commission tracking and its own website product. It scored level with Zoho. Zoho was preferred because its weakness is configuration work with a deadline, while Apimo's weakness is an absent integration surface that cannot be built on the vendor's behalf.
+**The choice, stated as a choice.**
 
-**Phase 1, weeks 1 to 4.** Property module, contact model, pipeline, permissions. Brokerage WhatsApp number onto the Cloud API. Agents logging every deal from the first working day. That is the only success measure that matters at this stage.
+| Choose | If BSH's priority is |
+|---|---|
+| **Odoo Custom** | One fewer system, the lowest cost, and commissions that reconcile themselves against finance without a sync. Accepting that agents need real training on a dense interface |
+| **Apimo** | Launching in weeks with almost no build, accepting that integration work to respond.io and Odoo comes later and is less bounded |
+| **Zoho CRM Pro** | Long-term flexibility and the Claude workflows, accepting a two to four week build and a separate commission-to-finance link |
+
+**Five questions to settle before any trial, in this order.**
+
+1. **Which Odoo plan and edition does BSH run?** For finance and IT. Standard removes Odoo from consideration. Custom or self-hosted makes it the leading candidate on cost and on commissions. Nothing can be sequenced before this answer.
+2. **Which respond.io plan is BSH on, what is current contact usage, and what does adding brokerage agents cost?** For the reservation team. This is budget the 12 October draft did not account for.
+3. **Should brokerage conversations have their own respond.io workspace, or share the guest inbox?** For the reservation team and the brokerage jointly. It affects cost, permissions, and whether concierge staff can see buyer negotiations.
+4. **Does HubSpot Starter stay or get retired?** For management. Keeping it means building and maintaining a two-way sync. Retiring it means a small migration of contacts and deals, after which the sync, the tooling cost and the record-ownership rules all disappear. The recommendation is to retire it, but not until the new system is proven, and not as a condition of the CRM decision.
+5. **Are the brokerage and management separate legal entities?** For management. It determines whether multi-company configuration and separated permissions are required.
+
+**Rollout, once a decision is made.**
+
+**Phase 1, weeks 1 to 4.** Property module, contact model, pipeline, permissions. The respond.io to CRM lead handover working, promoted into this phase because it is the lead capture path and cannot be late. Brokerage access configured in respond.io. Agents logging every deal from the first working day. That is the only success measure that matters at this stage.
 
 **Phase 2, weeks 4 to 10.** Brand and website built against the CRM API, with listings published from the CRM.
 
-**Phase 3, months 3 to 4.** HubSpot two-way synchronisation on contacts and deals. Claude workflows through the MCP server. Commission module with confirmed formulas.
+**Phase 3, months 3 to 4.** Commission module with confirmed formulas, and the link into Odoo if the chosen CRM is not Odoo. Claude workflows. HubSpot either synchronised or retired, per question 4 above.
 
-**Phase 4, as required.** Agent WhatsApp Coexistence subject to eligibility. Portal feeds once partnerships are in place. Meta Conversions API so advertising optimises toward closed deals rather than form submissions.
+**Phase 4, as required.** Guesty data link so actual occupancy and average daily rate from the managed portfolio can support buyer-facing return figures. Meta Conversions API so advertising optimises toward closed deals rather than form submissions. Portal feeds once partnerships are in place.
 
-**Success measures.** At 30 days, every agent logs every deal in the CRM and nothing is tracked in spreadsheets. At 90 days, website listings match CRM listings without manual intervention and no follow-up sits untouched beyond seven days. At 180 days, commissions calculate in the system and management sees brokerage pipeline without asking.
+**Success measures.** At 30 days, every agent logs every deal in the CRM, nothing is tracked in spreadsheets, and every acquisition inquiry arriving in respond.io reaches the CRM. At 90 days, website listings match CRM listings without manual intervention and no follow-up sits untouched beyond seven days. At 180 days, commissions calculate in the system and reconcile with Odoo, and management sees brokerage pipeline without asking.
 
 ---
 
