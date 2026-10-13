@@ -539,7 +539,9 @@ Added 2026-10-13. The research is as far as research can take this. What is left
 
 ## 9. Trial Plan
 
-Two weeks, both finalists in parallel, real data not sample data.
+*Revised 2026-10-13: three finalists, not two, and only once open item 15 confirms whether Odoo is eligible. Scenarios 4 and 6 are rewritten, because WhatsApp sending is no longer the CRM's job.*
+
+Two weeks, finalists in parallel, real data not sample data.
 
 Load into each: 10 real listings with real photos and real IDR prices, and 20 real leads with real history.
 
