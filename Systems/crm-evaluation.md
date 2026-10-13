@@ -1,14 +1,17 @@
 # BSH Brokerage CRM Evaluation
 
 *Created: 2026-10-11*
-*Status: research complete, trials not started, no decision made*
+*Revised: 2026-10-13 (existing BSH tool stack disclosed, Odoo added as a finalist, recommendation downgraded to provisional)*
+*Status: discussion document. Research complete, trials not started, no decision made and none to be made alone.*
 *Owner: Matthieu*
+
+> **Read this first.** The 2026-10-11 version of this document assumed the brokerage was starting from close to nothing, with HubSpot as the only incumbent system. That was wrong. BSH already runs five tools (Section 1.1), two of which overlap directly with what a CRM was being asked to do. The finalist set has changed, the recommendation is no longer a recommendation, and the remaining decision belongs to a group, not to one person. Section 8.1 sets out who needs to answer what.
 
 ---
 
 ## 1. Need Brief
 
-**The problem:** the BSH brokerage is a new brand launching in weeks. It has no CRM, no website, and no listing database. BSH Management runs HubSpot for its own pipeline. HubSpot is a competent B2B CRM and a poor fit for brokerage work, for one specific structural reason covered in Section 3.
+**The problem:** the BSH brokerage is a new brand launching in weeks. It has no CRM, no website, and no listing database. It does, however, sit inside an existing BSH tool stack that was not accounted for in the first draft. See Section 1.1.
 
 **What success looks like at 6 months:**
 - Every lead, listing, and viewing lives in one system that agents actually use
