@@ -430,6 +430,8 @@ guest + acquisition     deal, viewing
 
 ## 7.1 WhatsApp Messaging Economics (changed 1 October 2026)
 
+> **Scope changed 2026-10-13.** This section was written on the assumption that the CRM would hold the WhatsApp numbers. respond.io holds them, so none of this is a CRM selection criterion any more. **It is still live and still matters**, because Meta's per-message charges are passed through by every BSP including respond.io, and the cost of an AI qualifying bot is unchanged by which inbox sends it. Read this as respond.io operating economics, not as CRM evaluation. The questions move from "which CRM" to the reservation team and whoever administers respond.io.
+
 Meta changed WhatsApp pricing eleven days before this was written. Most vendor pages and blog posts still describe the old model. Anything online saying "service replies are free" is now wrong.
 
 **The three rules that govern everything:**
