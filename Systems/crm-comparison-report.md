@@ -106,20 +106,31 @@ Notes that matter for budgeting:
 
 ## 4. Integrations
 
-| Capability | Zoho | GoHighLevel | Closio |
-|---|---|---|---|
-| HubSpot two-way sync | Yes, via Zoho Flow, Whalesync or Stacksync | Zapier or Make only | Not offered |
-| Slack | Native | Zapier | Not offered |
-| Google Drive | Native, including file attachment to custom records | Zapier | Documents module, own storage |
-| Gmail and Google Calendar | Native two-way | Native | Not specified |
-| Claude and AI assistants | Official MCP server with published Claude setup guide | No MCP server | No MCP server |
-| Open REST API | Full, with webhooks | API v2, Unlimited tier only | Not publicly documented |
-| Scripting and custom code | Deluge, can call any external API | Limited | Not offered |
-| Mobile apps | iOS and Android | iOS and Android | iOS and Android |
+*Revised 13 October 2026. respond.io and Odoo are now the two integrations that matter most, because they sit at either end of the brokerage workflow: leads arrive through one and money leaves through the other.*
 
-Zoho is the only candidate that answers the AI requirement through a documented, supported route. BSH's working practice already runs through Claude, so an assistant that can read and write CRM records directly is worth more here than it would be at most brokerages.
+| Capability | Odoo Custom | Apimo | Zoho | GoHighLevel | Closio |
+|---|---|---|---|---|---|
+| **respond.io handover** | Zapier or Integrately, or API | Zapier or API | Zapier or Integrately, or API | Zapier or Make | Not offered |
+| **Odoo finance link** | **Internal, none required** | Custom work | Custom work | Custom work | Not offered |
+| HubSpot two-way sync | Zapier or Integrately | No connector found | Zoho Flow, Whalesync or Stacksync | Zapier or Make only | Not offered |
+| Slack | Native | Unverified | Native | Zapier | Not offered |
+| Google Drive | Documents module, plus API | Own document module | Native, including file attachment to custom records | Zapier | Documents module, own storage |
+| Gmail and Google Calendar | Native two-way | Native | Native two-way | Native | Not specified |
+| Guesty data link | API to API | API to API | API to API | Not practical | Not offered |
+| Claude and AI assistants | JSON-RPC or XML-RPC API. No official MCP server | No published route | **Official MCP server with published Claude setup guide** | No MCP server | No MCP server |
+| Open REST API | Full on Custom plan, with webhooks. **Not available on Standard** | Public API claimed | Full, with webhooks | API v2, Unlimited tier only | Not publicly documented |
+| Scripting and custom code | Python modules, open source core | Not offered | Deluge, can call any external API | Limited | Not offered |
+| Mobile apps | iOS and Android | iOS and Android | iOS and Android | iOS and Android | iOS and Android |
 
-The absence of a public API specification for Closio is a procurement concern independent of ownership. A website integration, a HubSpot sync and any future automation all depend on one.
+**Three observations.**
+
+**No candidate has a native respond.io connector.** HubSpot does, which is worth stating plainly, but HubSpot cannot hold a property record at a tier BSH would buy. For Odoo, Apimo and Zoho the handover is built using respond.io's webhooks and the CRM's API, or an intermediary such as Zapier or Integrately in the interim. Since this is the lead capture path, it belongs in the first phase of work rather than a later one. It is the highest-risk integration in the project and should be tested during the trial, not assumed.
+
+**Odoo's advantage on the finance link is structural and not replicable.** A commission calculated in Odoo produces the invoice and the journal entry in the same database. A commission calculated in Zoho or Apimo has to reach Odoo by synchronisation, which is a build, then a dependency, then a reconciliation problem. If commission accuracy is a priority, this is the most important row in the table.
+
+**Zoho's advantage on Claude is also real and also not replicable.** It is the only candidate with an official MCP server and a published Claude setup guide. Odoo can be reached through its API but without vendor support for it, and Apimo has no published route. Given that BSH's working practice already runs through Claude, this is a genuine differentiator rather than a feature-list entry.
+
+The absence of a public API specification for Closio is a procurement concern independent of ownership. A website integration, a respond.io handover and any future automation all depend on one.
 
 ---
 
