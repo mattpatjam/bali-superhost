@@ -137,7 +137,7 @@ Longlist considered: HubSpot (Pro and Enterprise), Attio, Pipedrive, Zoho CRM, Z
 
 | Tool | Why out |
 |---|---|
-| HubSpot Pro/Enterprise | Custom objects are Enterprise only. About $1,200/mo at 8 seats plus onboarding. See Section 3. |
+| HubSpot Starter (what BSH holds), Pro, Enterprise | No custom objects below Enterprise, so no property record at Starter or Pro. Enterprise is about $1,200/mo at 8 seats plus onboarding. See Section 3, Finding 2. |
 | Attio | Custom objects are Pro and Enterprise only, per Attio's own docs. Pro is $79/seat annual, so about $632/mo at 8 seats. Plus is capped at 5 total objects anyway, including the standard three. Excellent MCP server and API, genuinely good product, simply over budget for the object model needed. Revisit if the team stays at 4 seats. |
 | Pipedrive | Cheapest credible option at $14 to $49/seat, but it supports fewer record types than HubSpot or Attio. No real property object. Lead capture and web tracking are priced as separate add-ons. Pipeline tool, not a property system. |
 | Follow Up Boss, BoldTrail, Lofty, Top Producer, CINC, Real Geeks, iHomefinder, Wise Agent | MLS and IDX dependent. See Section 3, Finding 1. |
