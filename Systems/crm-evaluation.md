@@ -550,13 +550,14 @@ Then run these five scenarios in both, and time them:
 1. **Intake a listing.** Full villa record with title type, lease years remaining, dual-currency price, land and building size, 25 photos, owner contact, mandate document. Time it. If it takes an agent more than 10 minutes, adoption will fail.
 2. **Match a buyer.** A buyer wants leasehold, under $400K, Canggu or Berawa, sea view. How many clicks to get the matching inventory, and can it fire automatically when a new listing lands?
 3. **Publish a price change.** Change a listing price and confirm it reaches the website, or in the trial, confirm the API exposes the change and a webhook fires.
-4. **Log a WhatsApp conversation.** Inbound message to the brokerage number, assigned to an agent, replied to, and visible on the contact record afterwards.
-5. **Calculate a commission.** One closed deal with a co-broke split, agent commission, and BSH profit share. Does the system produce the numbers, or does it still need a spreadsheet?
-6. **Fire an automation into WhatsApp.** Build one workflow rule that sends a WhatsApp message on a record change, and one Cadence with a WhatsApp follow-up step. This resolves open item 11 and is the single highest-risk assumption in the whole stack. If it fails, the follow-up automation case has to be rebuilt around a dedicated WhatsApp platform like respond.io, which adds roughly $199/mo.
+4. **Capture a lead from respond.io.** *Rewritten 2026-10-13.* Take a real acquisition inquiry sitting in respond.io and get it into the CRM as a contact and a deal, with the thread link on the record. Use whatever path is realistic: webhook, Zapier, or Integrately. This is now the highest-risk integration in the stack, because it is the lead capture path and no finalist has a native connector. If it is ugly in a trial it will be worse in production.
+5. **Calculate a commission.** One closed deal with a co-broke split, agent commission, and BSH profit share. Does the system produce the numbers, or does it still need a spreadsheet? For Odoo, carry it one step further: does the invoice and the journal entry follow without a second system?
+6. **Hand a drafted follow-up back to respond.io.** *Rewritten 2026-10-13.* The CRM identifies who is owed contact and drafts the message from record history. A person sends it from respond.io. Test the full loop, including whether the sent message lands back on the CRM record. Automation that bypasses human approval is out of scope by policy, so the test is the handoff, not the send.
 
 Also, during the trial window:
 - Submit a real support ticket to each vendor and time the response. This is the cheapest vendor-health signal available.
 - Get one reference call per finalist, from a customer the vendor did not suggest. For Apimo specifically, try to find one in Asia.
+- **Put two agents in front of each candidate for thirty minutes and watch them intake a listing unassisted.** Added 2026-10-13, mainly because Odoo's adoption risk is the only thing that could sink the cheapest and architecturally cleanest option, and it cannot be assessed from a feature page.
 
 ---
 
