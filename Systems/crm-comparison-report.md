@@ -136,17 +136,22 @@ The absence of a public API specification for Closio is a procurement concern in
 
 ## 5. Automations
 
-| | Zoho | GoHighLevel | Closio |
-|---|---|---|---|
-| Trigger-based rules | Workflow Rules, 50 per module on Professional | Workflow builder | Automatic lead routing by language and listing type |
-| Follow-up sequences | Cadences, including WhatsApp template steps | Campaigns across channels | Automatic email broadcasts to segments |
-| Process enforcement | Blueprint, stage by stage, Professional tier | Pipeline stages | Pipeline |
-| Custom code | Deluge functions, Professional tier | Limited | None exposed |
-| AI assistance | Zia, Enterprise tier only | Included, deeply integrated | AI agent included, core to the product |
+*Revised 13 October 2026. Messaging automation now sits in respond.io for every candidate, so what matters here is internal process automation: what the CRM does to its own records, not what it sends to a client.*
 
-Zoho Professional at $23 unlocks both Blueprint and Deluge, which are the two capabilities that matter for enforcing a sales process and for reaching anything the native integrations miss. Zia, Zoho's own AI layer, sits on Enterprise at $40 and is not required, because Claude covers that ground through the MCP server.
+| | Odoo Custom | Apimo | Zoho | GoHighLevel | Closio |
+|---|---|---|---|---|---|
+| Trigger-based rules | Automated actions and server actions, Studio | Native rules | Workflow Rules, 50 per module on Professional | Workflow builder | Lead routing by language and listing type |
+| Follow-up sequences | Activity scheduling and reminders | Native | Cadences | Campaigns across channels | Email broadcasts to segments |
+| Process enforcement | Stages with required fields | Pipeline | Blueprint, stage by stage, Professional tier | Pipeline stages | Pipeline |
+| Custom code | Python, open source core | Not offered | Deluge functions, Professional tier | Limited | None exposed |
+| AI assistance | Odoo AI on Custom plan | Marketed, unverified | Zia, Enterprise tier only | Included, deeply integrated | AI agent included, core to the product |
+| Client messaging automation | Handled by respond.io in every case | | | | |
 
-Closio's automation is narrower but aimed precisely at this industry. Routing leads by spoken language and listing type is a real brokerage problem that generic platforms leave to configuration.
+Zoho Professional at $23 unlocks both Blueprint and Deluge, which matter for enforcing a sales process and for reaching anything the native integrations miss. Zia, Zoho's own AI layer, sits on Enterprise at $40 and is not required, because Claude covers that ground through the MCP server.
+
+Odoo's automation is adequate rather than strong for sales process work, since its heritage is operations and finance rather than selling. Its open source core means anything missing can be written, which is an advantage only if BSH's developers are willing to maintain it.
+
+Closio's automation is narrower but aimed precisely at this industry. Routing leads by spoken language and listing type is a real brokerage problem that generic platforms leave to configuration, although respond.io already performs routing of this kind across BSH's channels.
 
 ---
 
