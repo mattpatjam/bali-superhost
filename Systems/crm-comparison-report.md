@@ -302,6 +302,8 @@ Adopting Closio would place BSH's complete brokerage book inside a database owne
 - Zia AI sits on the Enterprise tier.
 - No Indonesian data centre. Australia or India must be chosen deliberately.
 - Per-seat pricing rises with headcount, reaching $575 per month at 25 agents.
+- Commission calculation sits in a different system from finance, so the result has to reach Odoo by synchronisation. Added 13 October 2026.
+- No native respond.io connector, so the lead capture handover is work the development team builds and maintains. Added 13 October 2026.
 
 ### GoHighLevel Unlimited
 
