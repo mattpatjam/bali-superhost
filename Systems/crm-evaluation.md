@@ -99,13 +99,17 @@ Rex Software deserves a note as the closest near-miss. It is built for Australia
 
 **Finding 2: HubSpot structurally cannot hold a property record at a price BSH will pay.**
 
-HubSpot's custom objects are Enterprise only, confirmed on HubSpot's own knowledge base and still true as of April 2026. Professional is limited to the four standard objects: contacts, companies, deals, tickets. There is no property object, and a villa is not a company or a deal.
+*Clarified 2026-10-13. BSH holds HubSpot Starter at $15/seat/mo, roughly $120/mo at 8 seats. The figures below describe the tiers that do have custom objects, not what BSH currently pays. Stating this plainly matters: anyone at BSH who knows their own bill will read an unqualified "$1,200/mo" as an error and discount the rest of this document.*
+
+HubSpot's custom objects are Enterprise only, confirmed on HubSpot's own knowledge base and still true as of April 2026. Every tier below it, Starter and Professional included, is limited to the four standard objects: contacts, companies, deals, tickets. There is no property object, and a villa is not a company or a deal. **BSH's Starter tier therefore cannot hold a property record, and neither could an upgrade to Professional.**
 
 The workarounds are both bad:
 - Model each villa as a Company record. Breaks reporting, breaks buyer matching, and corrupts management's own company data in the shared portal.
 - Upgrade to Sales Hub Enterprise. Roughly $150 per seat per month, so about $1,200 per month at 8 seats, plus a required one-time onboarding fee. That is more than twice the entire CRM budget, to get an object the €139 per month option has natively.
 
-**This is the argument to take to management.** It is not a preference or a taste question. HubSpot charges Enterprise prices for the one capability a brokerage cannot operate without, and a purpose-built alternative includes it at a tenth of the cost. Keeping HubSpot for management and adding a brokerage CRM is the cheaper option, not the indulgent one.
+**The argument to take to management.** It is not a preference or a taste question. The only HubSpot tier that can hold a villa costs roughly ten times what BSH pays today, and purpose-built alternatives include the object natively. So HubSpot is out as the brokerage system of record on structural grounds, at any tier BSH would realistically buy.
+
+**What the Starter tier does change.** The first draft treated HubSpot as an entrenched platform the brokerage had to integrate with. At $15/seat it is a lightweight pipeline tracker holding contacts and deals, with no custom objects to migrate. That makes retiring it genuinely cheaper than syncing to it. See Section 7, where this is now an open recommendation rather than an assumption.
 
 **Finding 3: Closio is disqualified because a direct competitor owns it.**
 
