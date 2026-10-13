@@ -637,3 +637,10 @@ All figures verified against vendor pricing pages and vendor documentation, Octo
 - Apimo packages and positioning: apimo.com/en, Capterra and Software Advice product profiles
 - GoHighLevel pricing and add-ons: gohighlevel.com/pricing
 - WhatsApp multi-agent limits and Coexistence: WhatsApp Help Center "About multi-agent", Meta for Developers "Onboard WhatsApp Business app users"
+
+Added 2026-10-13:
+- Odoo plan gating and pricing: odoo.com/pricing. Studio, external API and multi-company are Custom-plan features. Indonesia tier Custom at roughly Rp255,000 per user per month, cross-checked against two third-party pricing trackers (oec.sh, cudio.com) because Odoo's published price varies by country and was raised across several currency zones in September 2026. **Verify against BSH's actual invoice rather than any published figure.**
+- respond.io pricing and plan structure: respond.io/pricing. Starter $79/mo for 5 users, Growth $159/mo for 10 users and 1,000 monthly active contacts, additional users $12 to $20. Contact tiers price upward from there.
+- respond.io integrations: respond.io/help/integrations. Native HubSpot connector confirmed, including a HubSpot marketplace listing. No native Zoho or Odoo connector found. Zoho and Odoo paths are Zapier or Integrately only.
+- HubSpot Starter tier and object limits: HubSpot Knowledge Base, "Create and edit custom objects". Custom objects remain Enterprise-only, so Starter and Professional are both structurally excluded.
+- Guesty Open API: open-api-docs.guesty.com. Listings, reservations and journal entry endpoints confirmed available.
