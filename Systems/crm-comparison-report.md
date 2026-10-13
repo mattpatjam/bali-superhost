@@ -289,9 +289,8 @@ Adopting Closio would place BSH's complete brokerage book inside a database owne
 - Native Slack, Gmail, Google Calendar and Google Drive integration.
 - Full REST API, webhooks and Deluge scripting, so the development team can reach anything the native integrations miss, including Meta's Conversions API.
 - Blueprint enforces the sales process stage by stage, which matters when onboarding new agents.
-- Cadences support WhatsApp follow-up steps alongside email.
 - Zoho has been independent and profitable for over 25 years. No funding or acquisition risk.
-- At $184 per month, over $300 of the monthly budget remains for messaging and synchronisation tooling.
+- At $184 per month, over $300 of the monthly budget remains for synchronisation tooling and reserve.
 
 **Disadvantages**
 
