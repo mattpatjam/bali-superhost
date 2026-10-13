@@ -45,15 +45,21 @@ Requirements were set before any vendor was reviewed, to avoid selecting on demo
 - Buyer criteria matched against live inventory, with alerts when a new listing fits
 - The CRM as the single source of truth for listings, with the website reading from it so nothing is entered twice
 - Commission handling for co-broke splits, agent commission, the 20 percent brokerage profit share and the 15 percent property acquisition overriding commission
-- WhatsApp as a first-class channel, since the large majority of client contact happens there
-- Two-way synchronisation with HubSpot on contacts and deals, because managed villas get listed for sale and management clients become brokerage clients
+- A working handover from respond.io, so a qualified acquisition inquiry becomes a CRM record without anyone retyping it
+- A route into Odoo, so a closed deal and its commission lines become an invoice and a journal entry
+
+**Revised 13 October 2026, two requirements changed:**
+
+- **WhatsApp as a first-class CRM channel is withdrawn as a requirement.** respond.io already holds BSH's WhatsApp, Facebook, Instagram and TikTok channels, and already receives inbound property acquisition inquiries alongside guest inquiries. A phone number can only be registered to one WhatsApp Business Account at a time, so the CRM cannot take over a number respond.io holds without BSH running a second number. Keeping respond.io as the conversation layer is the sensible course: it is already paid for, already staffed, and already working. The CRM's job is to hold records, not conversations.
+- **Two-way synchronisation with HubSpot is now conditional.** It remains necessary if HubSpot stays, because managed villas get listed for sale and management clients become brokerage clients. However, at Starter tier with no custom objects and only contacts and deals held, migrating that pipeline into the chosen CRM and retiring HubSpot is a smaller exercise than building and maintaining a permanent two-way sync. Section 11 puts both options forward.
 
 **Constraints:**
 
 - Fewer than 10 users in year one, scaling toward 25
-- Under $500 per month, all inclusive
+- Under $500 per month, all inclusive. Note that this must now also absorb any additional respond.io seats and contact-tier cost for brokerage agents, which the 12 October draft did not account for.
 - Operational for the brokerage's first working day
 - Buy rather than build. BSH has a development team, but an in-house CRM at a previous employer took years and remains underused. Developers are better spent on integration and the website.
+- Adding a sixth system requires a stronger justification than adding a second one. Any proposal should address consolidation, not only addition.
 
 ---
 
