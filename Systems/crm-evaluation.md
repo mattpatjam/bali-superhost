@@ -31,14 +31,42 @@
 - Indonesia has no MLS, so IDX-dependent products are disqualified
 - Buy, do not build. Bali Exception proved an in-house CRM is a multi-year time sink. The dev team is for integration glue, not for building the core product.
 
-**Required integrations:**
+**Required integrations:** revised 2026-10-13, see Section 1.1 and Section 7.
 - Listing website (does not exist yet, so it gets built against whichever CRM wins)
-- HubSpot, two-way, on contacts and deals
-- WhatsApp, official Cloud API on the brokerage number
+- respond.io, inbound: new conversations and qualified leads become CRM records
+- Odoo, outbound: closed deals and commission lines become invoices and journal entries
+- HubSpot, two-way on contacts and deals, **if HubSpot survives the consolidation question in Section 7**
+- Guesty, read-only: ADR and occupancy on managed villas, for buyer-facing ROI
 - Slack, email, Google Drive
 - Claude, via API or MCP, for follow-up drafting and task triage
 
-**Stakeholders:** Matthieu (owner and champion), BSH management (holds HubSpot, needs to approve a second system), BSH dev team (builds the glue and the website), 4 to 6 brokerage agents (the actual users, and the ones who decide whether this succeeds).
+**No longer a CRM requirement:** WhatsApp Cloud API on the brokerage number. respond.io already holds it. See Section 1.1 and Section 7.
+
+**Stakeholders:** Matthieu (champion, not sole decision maker), BSH management (owns the existing stack and the budget, must approve any sixth tool), BSH finance (owns Odoo, and Odoo is now a candidate), BSH dev team (builds the glue and the website), the reservation and concierge team (owns respond.io day to day, and their inbox is the brokerage's lead capture point), 4 to 6 brokerage agents (the actual users, and the ones who decide whether this succeeds).
+
+---
+
+## 1.1 The Existing BSH Tool Stack
+
+Disclosed 2026-10-13, after the first draft was written. This section exists because the original analysis was built on an incomplete picture and anyone reading the earlier conclusions needs to know what moved.
+
+| Tool | What it does today | What it means for this decision |
+|---|---|---|
+| **respond.io** | Omnichannel inbox for the reservation and concierge team. WhatsApp, Facebook, Instagram, TikTok. Handles guest inquiries **and inbound property acquisition inquiries** | Removes WhatsApp from the CRM requirement entirely. Becomes the lead capture layer. Was the largest single input to Zoho's score |
+| **HubSpot Starter, $15/seat/mo** | Pipeline tracking | Confirms the HubSpot elimination (Starter has no custom objects). Also makes HubSpot small enough to absorb rather than integrate with. See Section 7 |
+| **Slack** | Internal communication | Unchanged. Native in Zoho, HubSpot and Odoo |
+| **Guesty** | PMS for the managed portfolio | Not a CRM candidate. Is a data source worth connecting, see Section 7 |
+| **Odoo** | Finance | **New finalist.** Odoo includes a CRM, and Odoo Custom includes Studio for custom models. See Section 4 and 5.1 |
+
+**The three consequences:**
+
+1. **WhatsApp is solved, and that was half of Zoho's winning margin.** The 2026-10-11 scorecard gave Zoho credit for including official WhatsApp Cloud API in the plan at no extra cost, and reserved budget headroom for a BSP. A phone number can only be registered to one WhatsApp Business Account at a time, so the same number cannot sit on both respond.io and a CRM. Either respond.io keeps the conversation layer, or the brokerage runs a separate second number. Keeping respond.io is obviously correct: it is already paid for, already staffed, and already receiving acquisition inquiries. Zoho's WhatsApp advantage is therefore no longer an advantage over anything, and Sections 7.1 and 7.2 are largely out of scope.
+
+2. **Odoo should have been on the longlist and was not.** It is the only candidate that could calculate a commission and book the revenue in the same database. Section 5.1 covers it properly.
+
+3. **Adding a sixth tool now needs a stronger case than adding a second one did.** The original framing was "keep HubSpot for management, add a brokerage CRM." The real framing is "BSH runs five systems, and the proposal is a sixth." That objection is legitimate and should be answered in writing before anything is proposed.
+
+**respond.io cost note.** Pricing is per plan plus monthly active contacts: Starter $79/mo for 5 users with unlimited contacts, Growth $159/mo for 10 users and 1,000 monthly active contacts, extra users $12 to $20 each, higher contact tiers priced upward from there. Adding 4 to 6 brokerage agents is a real line item against the $500 ceiling, and it also mixes brokerage buyer threads into the same contact pool as guest inquiries. Verify which plan BSH holds, how many monthly active contacts it currently uses, and whether the brokerage should sit in a separate workspace rather than a shared one.
 
 ---
 
