@@ -162,18 +162,27 @@ Longlist considered: HubSpot (Pro and Enterprise), Attio, Pipedrive, Zoho CRM, Z
 
 Weights adjusted from the standard rubric for this situation. Technical fit is raised to 25% because the website does not exist yet and will be built against the CRM's API, making API quality a launch dependency rather than a nice-to-have. Security is lowered to 5% because no regulated or health data is involved.
 
-| Dimension | Weight | Zoho CRM Pro | Apimo CRM AI+ | GoHighLevel |
-|---|---|---|---|---|
-| Functional fit (property model, matching, commissions) | 35% | 3.5 | 5.0 | 2.0 |
-| Technical fit (API, website, HubSpot, Claude, Slack, Drive) | 25% | 5.0 | 3.0 | 3.5 |
-| Operational fit (time to launch, admin burden) | 10% | 3.0 | 4.5 | 3.5 |
-| Cost at 8 seats | 10% | 5.0 | 5.0 | 4.0 |
-| Vendor health | 8% | 5.0 | 4.0 | 3.5 |
-| Lock-in risk / data portability | 7% | 4.0 | 3.0 | 2.0 |
-| Security and compliance | 5% | 4.0 | 3.5 | 3.0 |
-| **Weighted total** | **100%** | **4.16** | **4.16** | **2.90** |
+**Rescored 2026-10-13.** WhatsApp has been removed from the technical fit criterion, because respond.io now provides it for every candidate equally. That drops Zoho from 5.0 to 4.5 on technical fit, raises Apimo from 3.0 to 3.25, and lowers GoHighLevel from 3.5 to 3.25. Odoo is scored for the first time. The original scores are kept in brackets where they changed.
 
-**Zoho and Apimo tie, and the tie is the real finding.** Apimo wins the property model outright. Zoho wins the integration surface outright. GoHighLevel loses on the thing a brokerage needs most.
+| Dimension | Weight | Zoho CRM Pro | Apimo CRM AI+ | Odoo Custom | GoHighLevel |
+|---|---|---|---|---|---|
+| Functional fit (property model, matching, commissions) | 35% | 3.5 | 5.0 | 4.0 | 2.0 |
+| Technical fit (API, website, Claude, Slack, Drive) | 25% | 4.5 *(was 5.0)* | 3.25 *(was 3.0)* | 4.0 | 3.25 *(was 3.5)* |
+| Operational fit (time to launch, admin burden) | 10% | 3.0 | 4.5 | 2.5 | 3.5 |
+| Cost at 8 seats | 10% | 5.0 | 5.0 | 5.0 | 4.0 |
+| Vendor health | 8% | 5.0 | 4.0 | 4.5 | 3.5 |
+| Lock-in risk / data portability | 7% | 4.0 | 3.0 | 4.5 | 2.0 |
+| Security and compliance | 5% | 4.0 | 3.5 | 4.0 | 3.0 |
+| **Weighted total** | **100%** | **4.03** *(was 4.16)* | **4.22** *(was 4.16)* | **4.03** | **2.83** *(was 2.90)* |
+
+**The result is now a three-way near-tie, and that is the honest finding.** Apimo 4.22, Zoho 4.03, Odoo 4.03. A 0.19 spread across three candidates is noise, not a ranking. Anyone presenting this as "the numbers chose X" is misreading it.
+
+**Two caveats on the numbers themselves, both of which matter more than the totals:**
+
+- **The scorecard understates Odoo.** Commission calculation is one component of a 35% functional-fit score, sitting alongside the property model and buyer matching where Odoo is average. It does not capture that Odoo is the only candidate where a commission calculation and the invoice that follows it live in the same database, with no sync to build or maintain. If commission accuracy is weighted as its own dimension, Odoo leads.
+- **The scorecard understates Apimo's integration risk.** Apimo scores well on functional fit because the property model is native. But its connector gaps are now gaps against respond.io and Odoo rather than against WhatsApp and HubSpot, and those are the two systems the brokerage would actually depend on daily. The 3.25 may still be generous.
+
+GoHighLevel loses on the thing a brokerage needs most and is no longer a serious entry. It is retained below for the record.
 
 ### Per-finalist detail
 
