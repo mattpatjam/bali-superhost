@@ -95,8 +95,9 @@ At 8 users BSH would need CRM Pro at $189 plus three additional seats at $25, so
 
 Notes that matter for budgeting:
 
-- **Zoho One is cheaper than Zoho CRM Professional plus SalesIQ bought separately** ($296 against $344) and includes roughly 45 additional applications. The constraint is that Zoho One is licensed per employee, so every BSH employee would need a seat. Worth checking before assuming the saving.
-- **GoHighLevel's flat rate becomes compelling above about 13 users** and never increases. Its disqualification is functional, not financial.
+- **Odoo is the cheapest option and the only one that does not add a vendor**, a contract or a security review. Its cost advantage is understated in the table, because finance seats are already paid for. Its viability rests entirely on which plan BSH holds: the Standard plan excludes Odoo Studio and external API access, which would remove it from consideration altogether.
+- **Zoho One is cheaper than Zoho CRM Professional plus SalesIQ bought separately** ($296 against $344) and includes roughly 45 additional applications. The constraint is that Zoho One is licensed per employee, so every BSH employee would need a seat. Worth checking before assuming the saving. Note that SalesIQ's role was partly messaging, which respond.io now covers, so the comparison may no longer be the relevant one.
+- **GoHighLevel's flat rate becomes compelling above about 13 users** and never increases. Its disqualification is functional, not financial, and its strongest feature, the conversation and nurture layer, now duplicates respond.io.
 - **Closio costs roughly two to two and a half times the recommended option** and reaches the $500 ceiling once the AI pack is sized for real volume. It also scales poorly, because every user above five adds $25, putting a 25-agent team near $1,167 per month.
 - **Closio's per-thread AI pricing compares well on its own terms.** Packs work out at $0.40 to $0.65 per buyer thread against Meta's per-message billing elsewhere. Whether Meta's pass-through fees sit on top of Closio's packs is not stated and would need confirming.
 - **Meta's WhatsApp message fees apply on top of every option.** See Section 8.
