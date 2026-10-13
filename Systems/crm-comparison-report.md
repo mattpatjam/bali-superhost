@@ -67,17 +67,20 @@ Requirements were set before any vendor was reviewed, to avoid selecting on demo
 
 All figures verified against vendor pricing pages in October 2026. Annual billing where available.
 
-| | Zoho CRM Pro | Zoho One | GoHighLevel | Closio | Apimo |
-|---|---|---|---|---|---|
-| Model | Per seat | Per employee | Flat | Tiered plus usage | Flat |
-| Headline | $23/seat/mo | $37/user/mo | $297/mo | $189/mo to 5 users | €139/mo |
-| Cost at 8 users | $184/mo | $296/mo | $307/mo | $393 to $592/mo | ~$150/mo |
-| Cost at 25 users | $575/mo | $925/mo | $307/mo | ~$1,167/mo | ~$150/mo |
-| 3-year cost at 8 users | $6,624 | $10,656 | $11,052 | ~$13,608 | $5,400 |
-| WhatsApp cost | Included in plan | Included | $10/mo add-on | AI packs, see below | Unverified |
-| Onboarding fee | None | None | None | Included | Not published |
-| Annual discount | 20% | 20% | Yes | 20% | Not published |
-| Meta message fees | On top, all vendors | | | | |
+| | Odoo Custom | Apimo | Zoho CRM Pro | Zoho One | GoHighLevel | Closio |
+|---|---|---|---|---|---|---|
+| Model | Per seat | Flat | Per seat | Per employee | Flat | Tiered plus usage |
+| Headline | ~$15/user/mo | €139/mo | $23/seat/mo | $37/user/mo | $297/mo | $189/mo to 5 users |
+| Cost at 8 users | ~$120/mo | ~$150/mo | $184/mo | $296/mo | $307/mo | $393 to $592/mo |
+| Cost at 25 users | ~$375/mo | ~$150/mo | $575/mo | $925/mo | $307/mo | ~$1,167/mo |
+| 3-year cost at 8 users | ~$4,320 | $5,400 | $6,624 | $10,656 | $11,052 | ~$13,608 |
+| Incremental cost to BSH | Lower, finance seats already licensed | Full | Full | Full | Full | Full |
+| Onboarding fee | None on subscription. Implementation not included | Not published | None | None | None | Included |
+| Annual discount | Yes | Not published | 20% | 20% | Yes | 20% |
+| WhatsApp cost | Not applicable, respond.io holds the channel for every candidate | | | | | |
+| Meta message fees | Charged by respond.io on top, whichever CRM is chosen | | | | | |
+
+**Odoo figures: source and status.** The Odoo line is indicative and must be replaced with BSH's actual contract terms before it is relied on. Odoo prices per country and raised Custom-plan prices across several currency zones in September 2026. The Indonesia Custom tier is published at roughly Rp255,000 per user per month, around $15, cross-checked against two independent pricing trackers. Two qualifications matter: the figure applies to the Custom plan, and BSH's existing finance users are already licensed, so the brokerage's incremental cost is lower than the table implies. The subscription also excludes implementation work, which for a custom property model is comparable to Zoho's two to four weeks.
 
 **Closio figures: source and status.** Closio does not publish CRM or AI pricing. Its public pricing page offers a custom quote only. The figures above come from a Closio internal sales reference dated October 2026, which I retained from go-to-market work I did for the product while at Bali Exception (see Section 9). They are accurate as at that date but are not public, not quoted to BSH, and should be treated as indicative. Any real number would come from a quote.
 
