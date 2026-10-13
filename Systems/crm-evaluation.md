@@ -563,17 +563,21 @@ Also, during the trial window:
 
 ## 10. Rollout Plan
 
-Phased, because the website and the HubSpot sync do not have to block launch.
+*Revised 2026-10-13. The WhatsApp onboarding work is gone, the respond.io handoff is promoted into Phase 1, and the HubSpot sync is now conditional.*
 
-**Phase 0, now to 2 weeks: decide**
-- Run the trials and the five scenarios
-- Close out the open items in Section 8
-- Score with the dev team and whoever will administer it, not alone. The scoring argument is more useful than the number.
-- Negotiate before committing verbally. Ask for terms, not just price: annual discount, free onboarding or migration help, and a monthly-to-annual escape in the first 90 days. Keep the second finalist warm until terms are settled.
+Phased, because the website does not have to block launch.
+
+**Phase 0, now to 2 weeks: discuss, then decide**
+- Hold the four conversations in Section 8.1, starting with the Odoo plan question
+- Close out the open items in Section 8, items 15 to 21 first
+- Run the trials and the six scenarios on whichever candidates survive
+- Decide as a group, with the dev team and whoever will administer it in the room. The argument is more useful than the score.
+- Negotiate before committing verbally. Ask for terms, not just price: annual discount, free onboarding or migration help, and a monthly-to-annual escape in the first 90 days. Keep the runner-up warm until terms are settled.
 
 **Phase 1, weeks 2 to 4: CRM live for day one**
 - Property module, contact model, deal pipeline, user accounts and permissions
-- Brokerage WhatsApp number onto the Cloud API
+- **respond.io to CRM lead handoff working**, promoted from Phase 3 because it is the lead capture path
+- Brokerage access and workspace set up in respond.io
 - Agents logging deals from the first working day. This is the only Phase 1 success criterion that matters.
 
 **Phase 2, weeks 4 to 10: website**
@@ -581,18 +585,19 @@ Phased, because the website and the HubSpot sync do not have to block launch.
 - Listings publish from the CRM, no double entry, ever
 
 **Phase 3, months 3 to 4: connect the rest**
-- HubSpot two-way sync on contacts and deals
-- Claude via MCP: the follow-up brief and the draft-reply workflows
-- Commission module with the real formulas
+- Commission module with the real formulas, and the Odoo finance link if the CRM is not Odoo
+- Claude workflows: the follow-up brief and the draft-reply handoff
+- HubSpot two-way sync **only if Option B was chosen in Section 7**. If Option A, this becomes the HubSpot migration and retirement instead.
 
 **Phase 4, when needed**
-- Agent WhatsApp Coexistence, if eligible
+- Guesty read-only link for ADR and occupancy in buyer-facing ROI material
+- Meta Conversions API so ads optimise toward closed deals
 - Portal feeds, when partnerships land
 
 **Success criteria:**
-- Day 30: every agent logs every deal in the CRM, zero deals tracked in WhatsApp or spreadsheets
+- Day 30: every agent logs every deal in the CRM, zero deals tracked in spreadsheets, every acquisition inquiry in respond.io reaches the CRM
 - Day 90: website listings match CRM listings with no manual sync, no follow-up older than 7 days sitting untouched
-- Day 180: commission calculations run in the system, HubSpot sync stable, management can see brokerage pipeline without asking for it
+- Day 180: commission calculations run in the system and reconcile with Odoo, management sees brokerage pipeline without asking for it
 
 ---
 
