@@ -248,7 +248,7 @@ Scored against what BSH specifically needs, not against generic CRM criteria. Ap
 | Pros | Cons |
 |---|---|
 | Custom modules model the property exactly as Bali works: SHM, HGB, Hak Pakai, leasehold with years remaining, IDR and USD dual pricing, land in are and sqm | None of that exists on day one. It has to be built. Estimate 2 to 4 weeks of dev work before agents can use it |
-| Official WhatsApp Cloud API included in the plan, not a paid add-on. Cheapest full CRM with official API messaging | Buyer-to-listing matching is not native. Built with workflow rules and custom functions |
+| ~~Official WhatsApp Cloud API included in the plan~~ *(struck 2026-10-13, respond.io holds the numbers, no longer a differentiator)* | Buyer-to-listing matching is not native. Built with workflow rules and custom functions |
 | Official MCP server with a published Claude setup guide. Claude reads and writes records directly, no brittle middle layer. The only finalist that answers the AI requirement properly | Admin interface is dated and sprawling. Agent adoption depends entirely on how well the layouts get designed |
 | Native Slack and native Google Drive integrations, including attaching Drive files to custom module records | Professional caps custom modules and fields per module. Needs checking against the property schema before committing (open item 1) |
 | Full REST API and webhooks, so the website can be built against it cleanly | Listing photo handling is unproven at 25 to 40 images per villa. May need WorkDrive or Drive alongside (open item 2) |
