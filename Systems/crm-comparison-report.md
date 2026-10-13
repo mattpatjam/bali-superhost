@@ -255,6 +255,31 @@ Adopting Closio would place BSH's complete brokerage book inside a database owne
 
 ## 10. Pros and Cons
 
+### Odoo CRM, Custom plan
+
+*Added 13 October 2026. Everything below assumes BSH runs the Custom plan or self-hosted Enterprise. On the Standard plan there is no Odoo Studio and no external API access, and Odoo is not a candidate at all.*
+
+**Advantages**
+
+- Already in the stack, already licensed on the finance side, already administered by someone at BSH. It is the only option that does not add a sixth system, a new vendor, a new contract or a new security review.
+- Commission and finance in one database. Co-broke splits, the 20 percent brokerage profit share and the 15 percent property acquisition overriding commission calculate in the same system that raises the invoice and books the revenue. No synchronisation, no reconciliation, no spreadsheet at the end of a deal.
+- Odoo Studio builds custom models without code, so the property record can carry Indonesian title types, lease years remaining, dual-currency pricing and local land measurement.
+- Cheapest option reviewed, and cheaper still in practice because finance seats are already paid for.
+- One subscription covers CRM, Sales, Documents, Accounting, Website and Sign, so the listing site and document handling need no additional purchase.
+- Open source core, giving the strongest data and schema portability of any candidate and the lowest exit risk.
+- Full external API with webhooks on the Custom plan, so the listing website can be built against it cleanly.
+
+**Disadvantages**
+
+- Which plan BSH holds has not been confirmed. The Standard plan eliminates Odoo outright. Nothing else about this option can be concluded until that is answered.
+- The property model must be built, the same two to four weeks as Zoho. Odoo has no native real estate object.
+- Highest agent adoption risk of any candidate. The interface is built for operations and finance staff, not for salespeople working from a phone between viewings. This is the principal reason not to choose it.
+- No official MCP server, so Claude access runs through Odoo's API without vendor support for that use. Zoho is materially better here.
+- Buyer-to-listing matching is built rather than supplied, the same as Zoho.
+- No native respond.io connector, the same as every other candidate.
+- If the brokerage and management are separate legal entities, multi-company configuration is required. It is available on the Custom plan but is additional setup and raises permission questions about who sees whose records.
+- Per-seat pricing rises with headcount, though from a considerably lower base than Zoho.
+
 ### Zoho CRM Professional
 
 **Advantages**
