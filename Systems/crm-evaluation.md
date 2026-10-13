@@ -501,7 +501,39 @@ Nothing here should be assumed. Each of these could change the decision.
 | 11 | ~~Can Zoho workflow rules actually trigger WhatsApp sends~~ | **Closed 2026-10-13, no longer relevant.** respond.io owns WhatsApp sending and has native automation. Does not affect the CRM choice | Closed |
 | 12 | Indonesian WhatsApp message rates post 1 Oct 2026 | Pricing changed and varies by market. Still live, but now a respond.io operating cost question, not a CRM question | Reservation team + respond.io |
 | 13 | Zoho One ($37/user, so $296/mo at 8) vs CRM Pro + SalesIQ Enterprise ($344/mo) | Zoho One is cheaper and includes ~45 more apps, but is licensed per employee so everyone at BSH would need a seat. Check whether that is viable before assuming the saving | Matthieu + BSH |
-| 14 | Whether Meta Conversions API work is needed at launch or Phase 3 | Native Lead Ads integration captures leads but does not send conversion events back to Meta, so ads optimise toward form fills rather than closed deals. Deluge can call the Conversions API, but it is build work | Dev team |
+| 14 | Whether Meta Conversions API work is needed at launch or Phase 3 | Native Lead Ads integration captures leads but does not send conversion events back to Meta, so ads optimise toward form fills rather than closed deals. Build work whichever CRM wins | Dev team |
+
+**Added 2026-10-13, after the existing stack was disclosed:**
+
+| # | Item | Why it matters | Who |
+|---|---|---|---|
+| 15 | **Which Odoo plan and edition does BSH run: Standard, Custom, or self-hosted Community?** | **Blocking.** Standard has no Studio and no external API, which eliminates Odoo outright. Custom or Community with dev resource makes it the favourite on the finance and commission criterion. Nothing about Odoo can be concluded until this is answered | BSH finance + IT |
+| 16 | Which respond.io plan BSH holds, current monthly active contact usage, and seat count | Determines the cost of adding 4 to 6 brokerage agents, and whether the brokerage needs its own workspace. The first draft budgeted nothing for this | Reservation team |
+| 17 | Whether brokerage conversations should sit in a separate respond.io workspace or share the guest inbox | Affects the contact tier, the bill, agent permissions, and whether a buyer thread is visible to concierge staff | Reservation team + Matthieu |
+| 18 | Does management agree to retire HubSpot Starter, or does it stay? | Decides whether a two-way sync gets built at all. See Section 7, Options A and B | Matthieu + management |
+| 19 | respond.io to CRM handoff: webhook plus API, Zapier, or Integrately, and who owns it | No finalist has a native connector. This is the lead capture path, so it is Phase 1 work, not Phase 3 | Dev team |
+| 20 | Are brokerage and management separate legal entities? | Decides whether multi-company configuration is needed, which is a Custom-plan feature in Odoo and affects permissions in all three finalists | Matthieu + BSH |
+| 21 | Guesty API access and whether ADR/occupancy data can be used in buyer-facing material | Compliance and owner-consent question before performance data from managed villas appears in a listing presentation | Matthieu + management |
+
+---
+
+## 8.1 What Needs Discussing, and With Whom
+
+Added 2026-10-13. The research is as far as research can take this. What is left is not findable on a vendor page.
+
+**Four conversations, in this order:**
+
+**1. BSH finance and IT, one question.** Which Odoo plan and edition? Standard eliminates Odoo. Custom or Community makes it the leading candidate. Nothing else in the decision can be sequenced until this is known, so ask this first and ask it alone. Also worth asking in the same conversation: who administers Odoo today, and would they take on a brokerage module.
+
+**2. The reservation and concierge team.** They own respond.io and their inbox is where brokerage leads already arrive. Three things to establish: which plan and contact tier BSH is on, whether brokerage conversations get their own workspace or share theirs, and what the handoff looks like in practice when an acquisition inquiry lands. This team can block adoption more easily than anyone realises, because if the handoff is awkward they will simply keep handling brokerage inquiries themselves and the CRM will stay empty.
+
+**3. BSH management, the budget and stack conversation.** Frame it as what it is: BSH runs five systems and the brokerage needs a property database none of them can hold. Lead with the HubSpot structural point from Section 3 Finding 2, because it is the one argument that is not a matter of taste. Then put the consolidation option on the table (Section 7, Option A) so the proposal is "replace a tool" rather than only "add a tool."
+
+**4. The dev team.** Two estimates needed: the property schema build in whichever platform is chosen, and the respond.io handoff. Both are Phase 1. Also get their read on Odoo, because if they already maintain it their opinion on Studio is worth more than any external analysis.
+
+**What Matthieu should decide alone:** nothing in this document. What he should own is the property schema definition (what fields a Bali villa record actually needs), the commission formulas, and who administers the CRM day to day. Those are domain questions nobody else at BSH can answer, and all three are prerequisites regardless of which platform wins.
+
+**The trap to avoid.** The temptation is to arrive with a recommendation and defend it. Do not. Arrive with the three-way table from Section 6 and the question "which of these three things matters most to us," and let the group pick the axis. A CRM chosen by the people who have to feed it gets fed. One chosen for them does not, and the day-30 success criterion is agents logging every deal.
 
 ---
 
