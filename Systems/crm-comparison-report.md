@@ -386,19 +386,25 @@ Adopting Closio would place BSH's complete brokerage book inside a database owne
 
 ## 12. Risks and Open Items
 
+*Revised 13 October 2026. Two risks closed, four added.*
+
 | Risk | Consequence | Mitigation |
 |---|---|---|
-| Zoho workflow rules may not trigger WhatsApp sends reliably | The follow-up automation case collapses | Test explicitly during trial. Documentation and user reports conflict. Fallback is a dedicated platform at about $199/mo |
-| Indonesian WhatsApp rates unknown after the 1 October change | Bot running costs unbudgeted | Obtain written rates from the provider before signing |
-| Property schema may exceed Professional tier limits | Forced upgrade to Enterprise at $40/seat | Verify field and module caps against the schema first |
-| Agent adoption fails | The system becomes a second place to type things | Time the villa-entry workflow during trial. Beyond 10 minutes, redesign |
+| **BSH runs Odoo Standard rather than Custom** | The cheapest and architecturally cleanest option disappears, and the choice narrows to Zoho or Apimo | Confirm the plan and edition with finance and IT before anything else |
+| **No candidate has a native respond.io connector** | The lead capture path is custom work, and if it is late or fragile, leads stay in respond.io and the CRM sits empty | Build and test it in Phase 1, not Phase 3. Test it during the trial with a real inquiry |
+| **Odoo agent adoption fails** | A technically correct choice that salespeople will not use, which is worse than a compromise they will | Put two agents in front of it unassisted during the trial and watch, rather than judging from a demonstration |
+| **Brokerage and guest conversations share a respond.io inbox** | Contact-tier costs rise unpredictably and concierge staff can see buyer negotiations | Settle the workspace question with the reservation team before adding brokerage agents |
+| Property schema may exceed Zoho Professional tier limits | Forced upgrade to Enterprise at $40/seat | Verify field and module caps against the schema first |
+| Agent adoption fails generally | The system becomes a second place to type things | Time the villa-entry workflow during trial. Beyond 10 minutes, redesign |
 | No named administrator | The tool goes unused | Assign to the planned Admin and Listings Coordinator role |
-| HubSpot record ownership undefined | The two systems overwrite each other | Agree ownership rules with management before enabling synchronisation |
-| Commission formulas not documented | The commission module cannot be built | Document co-broke, profit share and overriding commission formulas |
+| HubSpot record ownership undefined, if HubSpot is retained | The two systems overwrite each other | Agree ownership rules with management before enabling synchronisation, or retire HubSpot and avoid the problem |
+| Commission formulas not documented | The commission module cannot be built in any candidate | Document co-broke, profit share and overriding commission formulas. This is needed regardless of which system wins |
+| ~~Zoho workflow rules may not trigger WhatsApp sends reliably~~ | **Closed 13 October 2026.** respond.io owns WhatsApp sending, so this no longer affects the CRM choice | |
+| ~~Indonesian WhatsApp rates unknown~~ | **Reassigned 13 October 2026.** Still live, but now a respond.io operating cost rather than a CRM selection risk | Obtain written rates from respond.io |
 
-**Before signing, confirm:** Zoho Professional module and field limits against the property schema; listing photograph handling; Coexistence eligibility for Indonesian numbers; data centre selection; IDR formatting at nine figures; Zoho One licensing viability; and whether Meta Conversions API work belongs at launch or in Phase 3.
+**Before signing, confirm:** the Odoo plan and edition; the respond.io plan, contact usage and incremental seat cost; Zoho Professional module and field limits against the property schema; listing photograph handling; data centre or hosting region selection; IDR formatting at nine figures; whether brokerage and management are separate legal entities; and whether Meta Conversions API work belongs at launch or later.
 
-**Trial plan.** Two weeks, Zoho and Apimo in parallel, using ten real listings with photographs and twenty real leads. Six scenarios: enter a villa and time it; match a buyer against inventory; change a price and confirm it reaches the website; log a WhatsApp conversation end to end; calculate a commission on a co-broked deal; and fire an automation into WhatsApp. Submit a support ticket to each vendor and time the reply. Obtain one reference from a customer the vendor did not nominate.
+**Trial plan.** Two weeks, in parallel, across whichever candidates remain eligible after the Odoo plan question is answered. Ten real listings with photographs and twenty real leads. Six scenarios: enter a villa and time it; match a buyer against live inventory; change a price and confirm it reaches the website or that the API exposes it; take a real acquisition inquiry from respond.io through to a CRM record; calculate a commission on a co-broked deal and follow it through to an invoice; and draft a follow-up from the CRM for sending through respond.io. Alongside that: submit a support ticket to each vendor and time the reply, obtain one reference from a customer the vendor did not nominate, and put two agents in front of each candidate unassisted for thirty minutes.
 
 ---
 
