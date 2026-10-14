@@ -12,7 +12,8 @@ Negotiation and comp/ESOP terms are tracked separately at `Personal/Career/BSH-K
 
 ## File Index
 
-- `Strategy/` — empty, next: extract Sections 1-10 of `Personal/Career/BSH-Kozystay/bsh-tuesday-meeting-draft.md` into a clean operating plan (positioning, competitive landscape, GTM channels, 90-day roadmap), stripped of negotiation framing
+- `Strategy/market-analysis-and-positioning.md` — **Step 1 of the business plan.** Bali market data 2026 with sources, the market gap (credible numbers, not inventory or leads), competitive landscape, honest assessment of the 538-unit book, four business models scored, the "BSH as underwriter" recommendation, the Ubud-vs-corridors geography fork, 4 blocking questions, and the phase sequence for the rest of the plan. Nothing decided yet
+- `Strategy/` — next: unit economics (Step 2), once the four blocking questions in `market-analysis-and-positioning.md` Section 8 are answered. Note: the July strategy doc extraction is now partly superseded, its Sections 2, 4 and 5 are carried into the market analysis already
 - `Hiring/adaptation-notes.md` — how Roberge's Sales Acceleration Formula hiring framework adapts to BSH. 6 open decisions, 6 direct transfers, 4 substitutions, scorecard mechanics. Raw capture, not the methodology. Next: resolve D1 (blocker) and D2, then write `hiring-methodology.md`
 - `Hiring/` — job descriptions still to come: 2x Senior Brokerage Agent, Villa Sourcer, Property Acquisition Sourcer, Admin & Listings Coordinator. These come out of the methodology, not before it
 - `Training/` — empty, next: adapt `Bali Exception/Training/` (7 files, deal-lifecycle sales training) for BSH's comp structure, listings, and team
